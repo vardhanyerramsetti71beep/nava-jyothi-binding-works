@@ -1,0 +1,1670 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nava Jyothi Binding Works | నవ జ్యోతి బైండింగ్ వర్క్స్ | Bookbinding & Online Order Store, Vijayawada</title>
+  
+  <!-- SEO & Meta Tags -->
+  <meta name="description" content="Nava Jyothi Binding Works (నవ జ్యోతి బైండింగ్ వర్క్స్) - Buy custom bookbinding, school notebooks, thesis binding, and wholesale paper products online. Pulipativari St, One Town, Vijayawada. Call +91 98491 40554.">
+  <meta name="keywords" content="Nava Jyothi Binding Works, Buy Bookbinding Online Vijayawada, Notebooks Online, Pulipativari Street, Kaleswara Rao Market, Thesis Binding Online, Marble Registers, Money Covers, Tarapet One Town">
+  <meta name="theme-color" content="#0b1528">
+  
+  <!-- Google Fonts & FontAwesome -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Noto+Sans+Telugu:wght@400;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- Leaflet Map CSS & JS (100% Reliable Map - Never Blank) -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+  <!-- Master Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Top Announcement Bar -->
+  <aside class="announcement-bar">
+    <div class="container announcement-content">
+      <div class="announcement-left">
+        <span class="live-indicator">
+          <span class="pulse-dot"></span> Open Today: 10:00 AM – 10:00 PM
+        </span>
+        <span class="announcement-text">
+          📍 Pulipativari Street, Kaleswara Rao Market, One Town, Vijayawada
+        </span>
+      </div>
+      <div class="announcement-right">
+        <span style="color: var(--accent-gold); font-weight: 700;">
+          <i class="fa-solid fa-truck-fast"></i> Online Ordering & Store Pickup Available!
+        </span>
+        <a href="tel:+919849140554" class="contact-quick-link">
+          <i class="fa-solid fa-phone"></i> +91 98491 40554
+        </a>
+        <a href="https://wa.me/919849140554?text=Hi%20Nava%20Jyothi%20Binding%20Works,%20I%20have%20an%20inquiry%20regarding%20book%20binding%20and%20paper%20goods" target="_blank" rel="noopener noreferrer" class="contact-quick-link">
+          <i class="fa-brands fa-whatsapp" style="color: #25d366;"></i> WhatsApp Order
+        </a>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Main Navigation Header -->
+  <header class="main-header" id="mainHeader">
+    <div class="container nav-wrapper">
+      <a href="#home" class="brand-logo" aria-label="Nava Jyothi Binding Works Home">
+        <div class="logo-icon-wrapper">
+          <i class="fa-solid fa-book-bookmark"></i>
+        </div>
+        <div class="brand-text">
+          <div class="brand-title">NAVA <span>JYOTHI</span></div>
+          <div class="brand-telugu telugu-font">నవ జ్యోతి బైండింగ్ వర్క్స్</div>
+          <div class="brand-tagline">Binding Works & Wholesale Paper Goods</div>
+        </div>
+      </a>
+
+      <!-- Desktop Nav Menu -->
+      <nav aria-label="Main Navigation">
+        <ul class="nav-links">
+          <li><a href="#home" class="nav-link active">Home</a></li>
+          <li><a href="#shop" class="nav-link" style="color: var(--accent-amber); font-weight: 800;"><i class="fa-solid fa-cart-shopping"></i> Online Store</a></li>
+          <li><a href="#services" class="nav-link">Services</a></li>
+          <li><a href="#calculator" class="nav-link">Order Estimator</a></li>
+          <li><a href="#gallery" class="nav-link">Gallery</a></li>
+          <li><a href="#reviews" class="nav-link">Reviews</a></li>
+          <li><a href="#location" class="nav-link">Location & Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Nav Actions -->
+      <div class="nav-actions">
+        <!-- Cart Nav Button -->
+        <button class="cart-nav-btn" onclick="toggleCartDrawer()" aria-label="Shopping Cart">
+          <i class="fa-solid fa-cart-shopping"></i>
+          <span>Cart</span>
+          <span class="cart-count-badge" id="cartCountBadge">0</span>
+        </button>
+
+        <button class="theme-toggle-btn" id="themeToggleBtn" title="Toggle Light/Dark Theme" aria-label="Toggle Theme">
+          <i class="fa-solid fa-moon" id="themeIcon"></i>
+        </button>
+        
+        <a href="https://wa.me/919849140554?text=Hello%20Nava%20Jyothi%20Binding%20Works!%20I%20need%20a%20quote%20for%20binding%20services." target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp btn-sm">
+          <i class="fa-brands fa-whatsapp"></i> Quick Quote
+        </a>
+        <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Open Mobile Menu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Menu -->
+  <div class="modal-backdrop" id="mobileNavBackdrop">
+    <div class="modal-dialog" style="max-width: 380px;">
+      <button class="modal-close-btn" id="closeMobileNav" aria-label="Close Menu">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+      <div style="text-align: center; margin-bottom: 1.5rem;">
+        <div class="logo-icon-wrapper" style="margin: 0 auto 0.75rem;">
+          <i class="fa-solid fa-book-bookmark"></i>
+        </div>
+        <h3 class="brand-title">NAVA <span>JYOTHI</span></h3>
+        <p class="brand-telugu telugu-font">నవ జ్యోతి బైండింగ్ వర్క్స్</p>
+      </div>
+      <ul style="list-style: none; display: flex; flex-direction: column; gap: 1rem; text-align: center;">
+        <li><a href="#home" class="btn btn-outline" style="width: 100%;" onclick="closeMobileMenu()">Home</a></li>
+        <li><a href="#shop" class="btn btn-primary" style="width: 100%;" onclick="closeMobileMenu()"><i class="fa-solid fa-cart-shopping"></i> Buy Online Store</a></li>
+        <li><a href="#services" class="btn btn-outline" style="width: 100%;" onclick="closeMobileMenu()">Services & Products</a></li>
+        <li><a href="#calculator" class="btn btn-outline" style="width: 100%;" onclick="closeMobileMenu()">Live Order Estimator</a></li>
+        <li><a href="#gallery" class="btn btn-outline" style="width: 100%;" onclick="closeMobileMenu()">Photo Gallery</a></li>
+        <li><a href="#reviews" class="btn btn-outline" style="width: 100%;" onclick="closeMobileMenu()">Google Reviews</a></li>
+        <li><a href="#location" class="btn btn-outline" style="width: 100%;" onclick="closeMobileMenu()">Directions & Contact</a></li>
+        <li style="margin-top: 1rem;">
+          <a href="tel:+919849140554" class="btn btn-navy" style="width: 100%;">
+            <i class="fa-solid fa-phone"></i> Call +91 98491 40554
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <main>
+    <!-- HERO SECTION -->
+    <section class="hero-section" id="home">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <div class="hero-badge">
+            <i class="fa-solid fa-award"></i>
+            <span>ESTD. 1990+ • VIJAYAWADA'S TRUSTED BINDERS</span>
+          </div>
+          
+          <h1 class="hero-title">
+            Exceptional Bookbinding & <span class="highlight-gold">Wholesale Paper Goods</span> in Vijayawada
+          </h1>
+
+          <div class="hero-subtitle-telugu telugu-font">
+            విజయవాడలో నమ్మకమైన బుక్ బైండింగ్, నోట్ బుక్స్ మరియు హోల్‌సేల్ పేపర్ ఉత్పత్తుల తయారీ కేంద్రం
+          </div>
+
+          <p class="hero-description">
+            Serving schools, universities, law firms, chartered accountants, and businesses across Andhra Pradesh for over three decades. Order bookbinding services, school notebooks, ledgers, and stationery online with instant UPI / card checkout and door delivery or in-store pickup!
+          </p>
+
+          <div class="hero-actions">
+            <a href="#shop" class="btn btn-primary btn-lg">
+              <i class="fa-solid fa-cart-shopping"></i> Order Online Now
+            </a>
+            <a href="#calculator" class="btn btn-navy btn-lg">
+              <i class="fa-solid fa-calculator"></i> Custom Order Estimator
+            </a>
+            <a href="https://wa.me/919849140554?text=Hello%20Nava%20Jyothi%20Binding%20Works!%20I%20would%20like%20to%20place%20an%20order." target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp btn-lg">
+              <i class="fa-brands fa-whatsapp"></i> WhatsApp Order
+            </a>
+          </div>
+
+          <div class="hero-stats-row">
+            <div class="stat-item">
+              <div class="stat-number">30<span>+</span></div>
+              <div class="stat-label">Years of Craft</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-number">50K<span>+</span></div>
+              <div class="stat-label">Books Bound</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-number">4.0<span>★</span></div>
+              <div class="stat-label">Google Rating</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-number">100<span>%</span></div>
+              <div class="stat-label">Secure Online Pay</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hero Visual Showcase with Real Photo from Google Maps -->
+        <div class="hero-visual-card">
+          <div class="hero-main-photo-wrapper">
+            <img src="assets/images/storefront-entrance.jpg" alt="Nava Jyothi Binding Works Storefront on Pulipativari Street, Vijayawada" id="heroMainImg" onclick="openLightbox('assets/images/storefront-entrance.jpg', 'Storefront Entrance & Signboard - Nava Jyothi Binding Works, Vijayawada')">
+            <div class="photo-overlay-badge">
+              <i class="fa-solid fa-camera"></i>
+              <span>Authentic Shop Entrance • Pulipativari St</span>
+            </div>
+          </div>
+
+          <div class="hero-floating-card">
+            <div class="floating-icon">
+              <i class="fa-solid fa-bag-shopping"></i>
+            </div>
+            <div class="floating-content">
+              <h4>Buy Online & Pick Up</h4>
+              <p>Instant UPI / QR Payment • Ready in 2-4h</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+    <!-- ==========================================================================
+         ONLINE STORE & DIRECT BUYING METHOD SECTION
+         ========================================================================== -->
+    <section class="section" id="shop" style="background: radial-gradient(circle at 10% 10%, rgba(245, 158, 11, 0.08) 0%, transparent 40%);">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag" style="background: rgba(16, 185, 129, 0.12); color: #059669;">
+            <i class="fa-solid fa-bag-shopping"></i>
+            <span>ONLINE STORE & INSTANT CHECKOUT</span>
+          </div>
+          <h2 class="section-title">Order Binding & Stationery Products Online</h2>
+          <div class="section-subtitle-telugu telugu-font">
+            ఆన్‌లైన్ ద్వారా నేరుగా బుక్ బైండింగ్ మరియు స్టేషనరీ ఆర్డర్ చేయండి
+          </div>
+          <p class="section-desc">
+            Pay safely via Google Pay, PhonePe, Paytm, UPI QR, Debit/Credit Card, or Net Banking. Choose between fast door delivery in Vijayawada or in-store collection at Pulipativari Street.
+          </p>
+        </div>
+
+        <!-- Products Grid -->
+        <div class="shop-grid" id="onlineShopGrid">
+          
+          <!-- Product 1: Custom Thesis Binding -->
+          <article class="product-card" id="prod-thesis">
+            <div class="product-img-box">
+              <img src="assets/images/storefront-entrance.jpg" alt="Hardcover Thesis Binding">
+              <span class="product-badge gold"><i class="fa-solid fa-bolt"></i> Same-Day Rush</span>
+            </div>
+            <div class="product-info">
+              <div class="product-category-tag">Binding Service</div>
+              <h3 class="product-title">Hardcover Thesis & Project Binding</h3>
+              <div class="product-telugu telugu-font">హార్డ్ కవర్ థీసిస్ బైండింగ్ (గోల్డ్ లెటర్స్)</div>
+              <p class="product-desc">
+                Rexine leatherette with golden foil hot-stamped embossing. Upload your PDF report online; collected or delivered ready to submit.
+              </p>
+              
+              <!-- PDF Upload Field for Thesis -->
+              <div style="background: var(--bg-surface); padding: 0.65rem; border-radius: var(--radius-sm); border: 1px dashed var(--accent-gold); margin-bottom: 1rem;">
+                <label style="font-size: 0.78rem; font-weight: 700; color: var(--text-main); display: flex; align-items: center; gap: 0.35rem; cursor: pointer;">
+                  <i class="fa-solid fa-file-arrow-up" style="color: var(--accent-amber);"></i> Attach Project PDF:
+                </label>
+                <input type="file" id="thesisPdfUpload" accept=".pdf,.doc,.docx" style="font-size: 0.75rem; width: 100%; margin-top: 0.25rem;" onchange="handleFileUpload(event, 'thesis')">
+                <span id="thesisPdfStatus" style="font-size: 0.72rem; color: #10b981; font-weight: 600;"></span>
+              </div>
+
+              <div class="product-pricing">
+                <span class="product-price" style="font-size: 1rem; color: var(--accent-amber);"><i class="fa-solid fa-tag"></i> Best Rate on Request</span>
+                <span class="product-discount">Custom Specs</span>
+              </div>
+
+              <div class="product-actions">
+                <button class="btn btn-outline btn-sm" onclick="addToCart('Hardcover Thesis Binding', 'assets/images/storefront-entrance.jpg', 'Binding Service', true)">
+                  <i class="fa-solid fa-cart-plus"></i> Add to Order
+                </button>
+                <button class="btn btn-primary btn-sm" onclick="buyNow('Hardcover Thesis Binding', 'assets/images/storefront-entrance.jpg', 'Binding Service', true)">
+                  <i class="fa-solid fa-cart-shopping"></i> Order Online
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Product 2: School Note Books 12 Pack -->
+          <article class="product-card" id="prod-notebooks">
+            <div class="product-img-box">
+              <img src="assets/images/interior-aisle-stock.jpg" alt="School Note Books Bundle">
+              <span class="product-badge"><i class="fa-solid fa-industry"></i> In-House Mfr</span>
+            </div>
+            <div class="product-info">
+              <div class="product-category-tag">Note Books</div>
+              <h3 class="product-title">School Note Books Bundle (12 Pack)</h3>
+              <div class="product-telugu telugu-font">స్కూల్ నోట్ బుక్స్ బండిల్ (12 పుస్తకాలు)</div>
+              <p class="product-desc">
+                172 Pages, Single Rule, superior high-brightness white paper, heavy-duty thread and pin stitching. Produced by Nava Jyothi.
+              </p>
+
+              <div class="product-pricing">
+                <span class="product-price" style="font-size: 1rem; color: var(--accent-amber);"><i class="fa-solid fa-boxes-stacked"></i> Factory Direct Bundle</span>
+                <span class="product-discount">Wholesale Rate</span>
+              </div>
+
+              <div class="product-actions">
+                <button class="btn btn-outline btn-sm" onclick="addToCart('School Note Books (12 Pack)', 'assets/images/interior-aisle-stock.jpg', 'Note Books')">
+                  <i class="fa-solid fa-cart-plus"></i> Add to Order
+                </button>
+                <button class="btn btn-primary btn-sm" onclick="buyNow('School Note Books (12 Pack)', 'assets/images/interior-aisle-stock.jpg', 'Note Books')">
+                  <i class="fa-solid fa-cart-shopping"></i> Order Online
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Product 3: Marble Bound Account Ledger -->
+          <article class="product-card" id="prod-ledger">
+            <div class="product-img-box">
+              <img src="assets/images/storefront-entrance.jpg" alt="Marble Bound Account Ledger">
+              <span class="product-badge"><i class="fa-solid fa-landmark"></i> Commercial</span>
+            </div>
+            <div class="product-info">
+              <div class="product-category-tag">Ledgers & Registers</div>
+              <h3 class="product-title">Commercial Marble Ledger (200 Pages)</h3>
+              <div class="product-telugu telugu-font">మార్బుల్ బైండింగ్ లెడ్జర్ / డే బుక్</div>
+              <p class="product-desc">
+                Traditional marble-bound hardboard with cloth-reinforced spine, pre-numbered ledger rule, suitable for audit, tax, and shop records.
+              </p>
+
+              <div class="product-pricing">
+                <span class="product-price" style="font-size: 1rem; color: var(--accent-amber);"><i class="fa-solid fa-book"></i> Custom Sizes Available</span>
+                <span class="product-discount">Durable Bind</span>
+              </div>
+
+              <div class="product-actions">
+                <button class="btn btn-outline btn-sm" onclick="addToCart('Commercial Marble Ledger (200 Pgs)', 'assets/images/storefront-entrance.jpg', 'Ledgers')">
+                  <i class="fa-solid fa-cart-plus"></i> Add to Order
+                </button>
+                <button class="btn btn-primary btn-sm" onclick="buyNow('Commercial Marble Ledger (200 Pgs)', 'assets/images/storefront-entrance.jpg', 'Ledgers')">
+                  <i class="fa-solid fa-cart-shopping"></i> Order Online
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Product 4: Shagun Money Gift Covers -->
+          <article class="product-card" id="prod-giftcovers">
+            <div class="product-img-box">
+              <img src="assets/images/interior-aisle-stock.jpg" alt="Wedding Money Gift Covers">
+              <span class="product-badge gold"><i class="fa-solid fa-sparkles"></i> Festive</span>
+            </div>
+            <div class="product-info">
+              <div class="product-category-tag">Gift Covers</div>
+              <h3 class="product-title">Wedding Money Gift Covers (Pack of 25)</h3>
+              <div class="product-telugu telugu-font">శుభలేఖ మనీ గిఫ్ట్ కవర్లు (25 ప్యాక్)</div>
+              <p class="product-desc">
+                Gold metallic hot foil motif designs, royal embossed borders on luxury cardstock. Ideal for weddings, house warming, and festivals.
+              </p>
+
+              <div class="product-pricing">
+                <span class="product-price" style="font-size: 1rem; color: var(--accent-amber);"><i class="fa-solid fa-envelope"></i> Pack of 25 Covers</span>
+                <span class="product-discount">In Stock</span>
+              </div>
+
+              <div class="product-actions">
+                <button class="btn btn-outline btn-sm" onclick="addToCart('Wedding Money Gift Covers (25 Pcs)', 'assets/images/interior-aisle-stock.jpg', 'Gift Covers')">
+                  <i class="fa-solid fa-cart-plus"></i> Add to Order
+                </button>
+                <button class="btn btn-primary btn-sm" onclick="buyNow('Wedding Money Gift Covers (25 Pcs)', 'assets/images/interior-aisle-stock.jpg', 'Gift Covers')">
+                  <i class="fa-solid fa-cart-shopping"></i> Order Online
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Product 5: JK Copier Paper Ream -->
+          <article class="product-card" id="prod-paper">
+            <div class="product-img-box">
+              <img src="assets/images/interior-aisle-stock.jpg" alt="JK Copier Paper Ream">
+              <span class="product-badge"><i class="fa-solid fa-box"></i> Wholesale Ream</span>
+            </div>
+            <div class="product-info">
+              <div class="product-category-tag">Wholesale Paper</div>
+              <h3 class="product-title">JK Copier A4 Paper Ream (75 GSM)</h3>
+              <div class="product-telugu telugu-font">ఏ4 ఫోటోకాపీ పేపర్ రీమ్ (500 షీట్లు)</div>
+              <p class="product-desc">
+                500 Sheets, crisp white high-speed jam-free copier paper for commercial laser printers, college projects, and office printing.
+              </p>
+
+              <div class="product-pricing">
+                <span class="product-price" style="font-size: 1rem; color: var(--accent-amber);"><i class="fa-solid fa-truck"></i> Wholesale Ream Rate</span>
+                <span class="product-discount">Bulk Stock</span>
+              </div>
+
+              <div class="product-actions">
+                <button class="btn btn-outline btn-sm" onclick="addToCart('JK Copier A4 Ream (75 GSM)', 'assets/images/interior-aisle-stock.jpg', 'Paper')">
+                  <i class="fa-solid fa-cart-plus"></i> Add to Order
+                </button>
+                <button class="btn btn-primary btn-sm" onclick="buyNow('JK Copier A4 Ream (75 GSM)', 'assets/images/interior-aisle-stock.jpg', 'Paper')">
+                  <i class="fa-solid fa-cart-shopping"></i> Order Online
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Product 6: Spiral Project Report Binding -->
+          <article class="product-card" id="prod-spiral">
+            <div class="product-img-box">
+              <img src="assets/images/storefront-entrance.jpg" alt="Spiral Binding Service">
+              <span class="product-badge gold"><i class="fa-solid fa-graduation-cap"></i> Student Favorite</span>
+            </div>
+            <div class="product-info">
+              <div class="product-category-tag">Binding Service</div>
+              <h3 class="product-title">Spiral & Wire-O Report Binding</h3>
+              <div class="product-telugu telugu-font">స్పైరల్ ప్రాజెక్ట్ రిపోర్ట్ బైండింగ్</div>
+              <p class="product-desc">
+                Heavy gauge coil binding with clear scratch-resistant front PVC sheet and sturdy colored card backing. Up to 100 pages included.
+              </p>
+
+              <div class="product-pricing">
+                <span class="product-price" style="font-size: 1rem; color: var(--accent-amber);"><i class="fa-solid fa-bolt"></i> Instant Turnaround</span>
+                <span class="product-discount">Best Rates</span>
+              </div>
+
+              <div class="product-actions">
+                <button class="btn btn-outline btn-sm" onclick="addToCart('Spiral Project Binding', 'assets/images/storefront-entrance.jpg', 'Binding Service', true)">
+                  <i class="fa-solid fa-cart-plus"></i> Add to Order
+                </button>
+                <button class="btn btn-primary btn-sm" onclick="buyNow('Spiral Project Binding', 'assets/images/storefront-entrance.jpg', 'Binding Service', true)">
+                  <i class="fa-solid fa-cart-shopping"></i> Order Online
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Product 7: Long Notebooks 6 Pack -->
+          <article class="product-card" id="prod-longbooks">
+            <div class="product-img-box">
+              <img src="assets/images/interior-aisle-stock.jpg" alt="Long Notebooks King Size">
+              <span class="product-badge"><i class="fa-solid fa-book"></i> King Size</span>
+            </div>
+            <div class="product-info">
+              <div class="product-category-tag">Note Books</div>
+              <h3 class="product-title">College Long Notebooks (6 Pack)</h3>
+              <div class="product-telugu telugu-font">లాంగ్ నోట్ బుక్స్ ప్యాక్ (192 పేజీలు)</div>
+              <p class="product-desc">
+                192 Pages, King Size, Single Ruled, glossy durable outer cover, smooth glide paper for engineering & degree students.
+              </p>
+
+              <div class="product-pricing">
+                <span class="product-price" style="font-size: 1rem; color: var(--accent-amber);"><i class="fa-solid fa-graduation-cap"></i> 6 Pack Bundle</span>
+                <span class="product-discount">College Grade</span>
+              </div>
+
+              <div class="product-actions">
+                <button class="btn btn-outline btn-sm" onclick="addToCart('College Long Notebooks (6 Pack)', 'assets/images/interior-aisle-stock.jpg', 'Note Books')">
+                  <i class="fa-solid fa-cart-plus"></i> Add to Order
+                </button>
+                <button class="btn btn-primary btn-sm" onclick="buyNow('College Long Notebooks (6 Pack)', 'assets/images/interior-aisle-stock.jpg', 'Note Books')">
+                  <i class="fa-solid fa-cart-shopping"></i> Order Online
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Product 8: Casio Commercial Calculator -->
+          <article class="product-card" id="prod-casio">
+            <div class="product-img-box">
+              <img src="assets/images/interior-aisle-stock.jpg" alt="Casio Commercial Calculator">
+              <span class="product-badge"><i class="fa-solid fa-calculator"></i> Original</span>
+            </div>
+            <div class="product-info">
+              <div class="product-category-tag">Commercial Stationery</div>
+              <h3 class="product-title">Casio DJ-120D Commercial Calculator</h3>
+              <div class="product-telugu telugu-font">కాసియో 12 డిజిట్ చెక్ & కరెక్ట్ కాలిక్యులేటర్</div>
+              <p class="product-desc">
+                12 Digits, 300 steps check & correct, extra large display, two-way power (Solar + Battery). Ideal for billing and shops.
+              </p>
+
+              <div class="product-pricing">
+                <span class="product-price" style="font-size: 1rem; color: var(--accent-amber);"><i class="fa-solid fa-certificate"></i> 100% Genuine Casio</span>
+                <span class="product-discount">Warranty</span>
+              </div>
+
+              <div class="product-actions">
+                <button class="btn btn-outline btn-sm" onclick="addToCart('Casio DJ-120D Calculator', 'assets/images/interior-aisle-stock.jpg', 'Stationery')">
+                  <i class="fa-solid fa-cart-plus"></i> Add to Order
+                </button>
+                <button class="btn btn-primary btn-sm" onclick="buyNow('Casio DJ-120D Calculator', 'assets/images/interior-aisle-stock.jpg', 'Stationery')">
+                  <i class="fa-solid fa-cart-shopping"></i> Order Online
+                </button>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- INTERACTIVE PRICE ESTIMATOR / CALCULATOR SECTION -->
+    <section class="section section-alt" id="calculator">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">
+            <i class="fa-solid fa-calculator"></i>
+            <span>CUSTOM SPECIFICATION ESTIMATOR</span>
+          </div>
+          <h2 class="section-title">Configure Your Binding & Print Order Specifications</h2>
+          <div class="section-subtitle-telugu telugu-font">
+            మీ బుక్ బైండింగ్ ఆర్డర్ వివరాలను మరియు స్పెసిఫికేషన్లను ఎంచుకోండి
+          </div>
+          <p class="section-desc">
+            Configure your exact binding type, page count, cover finish, and quantity. Send the generated specification summary straight to our WhatsApp or add it to your online cart!
+          </p>
+        </div>
+
+        <div class="calculator-card">
+          <!-- Calculator Input Form -->
+          <div class="calc-form">
+            <!-- Service Selection -->
+            <div class="calc-group">
+              <label for="calcServiceType" class="calc-label">
+                <span>1. Select Binding / Product Type</span>
+                <span class="text-gold" id="serviceBadgeLabel">Hardcover Thesis</span>
+              </label>
+              <select id="calcServiceType" class="calc-select" onchange="calculateEstimate()">
+                <option value="hardcover" selected>Hardcover Thesis / Project Binding (Rexine & Gold Embossed)</option>
+                <option value="spiral">Spiral & Wire-O Binding (Project Reports & Manuals)</option>
+                <option value="ledger">Account Book / Marble Binding Register (మార్బుల్ బైండింగ్)</option>
+                <option value="stitched">Stitched Exercise Books & Rough Books (కుట్టు పుస్తకాలు)</option>
+                <option value="softcover">Softcover / Thermal Tape Binding</option>
+                <option value="shagun">Custom Printed Shagun & Money Gift Covers</option>
+              </select>
+            </div>
+
+            <!-- Page Count Slider -->
+            <div class="calc-group" id="pageCountGroup">
+              <div class="calc-label">
+                <span>2. Number of Pages</span>
+                <span style="font-size: 1.1rem; color: var(--accent-gold); font-weight: 800;" id="pageCountDisplay">120 Pages</span>
+              </div>
+              <div class="range-slider-wrapper">
+                <input type="range" min="10" max="600" step="5" value="120" class="calc-range" id="calcPageCount" oninput="updatePageCount(this.value)">
+                <div class="range-values">
+                  <span>10 Pages</span>
+                  <span>150</span>
+                  <span>300</span>
+                  <span>450</span>
+                  <span>600+ Pages</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Paper Quality Option -->
+            <div class="calc-group" id="paperQualityGroup">
+              <label class="calc-label">3. Paper Quality & GSM</label>
+              <div class="calc-pills-selector">
+                <div class="calc-pill-option">
+                  <input type="radio" name="paperType" id="paper70" value="70" checked onchange="calculateEstimate()">
+                  <label for="paper70">
+                    <strong>70 GSM</strong>
+                    <span>Standard Paper</span>
+                  </label>
+                </div>
+                <div class="calc-pill-option">
+                  <input type="radio" name="paperType" id="paper80" value="80" onchange="calculateEstimate()">
+                  <label for="paper80">
+                    <strong>80 GSM Bond</strong>
+                    <span>Executive Grade</span>
+                  </label>
+                </div>
+                <div class="calc-pill-option">
+                  <input type="radio" name="paperType" id="paper100" value="100" onchange="calculateEstimate()">
+                  <label for="paper100">
+                    <strong>100 GSM Gloss</strong>
+                    <span>Premium Color Print</span>
+                  </label>
+                </div>
+              </div>
+            </div>
+
+            <!-- Cover Finish Option -->
+            <div class="calc-group" id="coverFinishGroup">
+              <label class="calc-label">4. Cover Finish & Lettering</label>
+              <select id="calcCoverFinish" class="calc-select" onchange="calculateEstimate()">
+                <option value="gold_foil">Gold Foil Hot-Stamping on Rexine Leatherette (Default for Theses)</option>
+                <option value="silver_foil">Silver Foil Lettering on Rexine</option>
+                <option value="gloss_lam">Full Color Gloss Laminated Card (350 GSM)</option>
+                <option value="matte_lam">Matte Laminated Soft Board</option>
+                <option value="marble">Traditional Marble Pattern Rigid Hardbound</option>
+                <option value="pvc_clear">Clear Transparent PVC Sheet with Backing</option>
+              </select>
+            </div>
+
+            <!-- Quantity & Turnaround -->
+            <div class="calc-group">
+              <div class="calc-label">
+                <span>5. Quantity (Copies)</span>
+                <span id="bulkDiscountTag" style="font-size: 0.8rem; color: #10b981; font-weight: 700;">Single Order</span>
+              </div>
+              <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                <input type="number" min="1" max="5000" value="3" class="calc-input" id="calcQuantity" oninput="calculateEstimate()">
+                <select id="calcTurnaround" class="calc-select" onchange="calculateEstimate()">
+                  <option value="standard">Standard (24 - 48 Hours)</option>
+                  <option value="express">Same-Day Express Rush (2 - 4 Hours)</option>
+                  <option value="wholesale">Bulk Wholesale Schedule</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <!-- Live Summary Box -->
+          <div class="calc-summary-box">
+            <div>
+              <div class="summary-header">
+                <h3>Order Specification Summary</h3>
+                <p>Nava Jyothi Precision Crafting Guarantee</p>
+              </div>
+
+              <div class="turnaround-pill" id="summaryTurnaroundPill">
+                <i class="fa-solid fa-bolt"></i> Ready within 24 Hours
+              </div>
+
+              <div class="summary-lines">
+                <div class="summary-row">
+                  <span>Selected Service:</span>
+                  <strong id="sumService">Hardcover Thesis</strong>
+                </div>
+                <div class="summary-row">
+                  <span>Page Count:</span>
+                  <strong id="sumPages">120 Pages / Copy</strong>
+                </div>
+                <div class="summary-row">
+                  <span>Cover & Finish:</span>
+                  <strong id="sumCover">Rexine + Gold Foil</strong>
+                </div>
+                <div class="summary-row">
+                  <span>Quantity:</span>
+                  <strong id="sumQuantity">3 Copies</strong>
+                </div>
+                <div class="summary-row total-row">
+                  <span>Pricing Category:</span>
+                  <span id="sumTotalTier" style="color: var(--accent-gold);">Custom Wholesale / Retail Quote</span>
+                </div>
+              </div>
+
+              <div class="summary-price-tag" id="summaryPriceDisplay" style="font-size: 1.35rem;">
+                <i class="fa-solid fa-file-invoice"></i> Instant Quote on Request
+              </div>
+              <div class="price-subtext">
+                *Direct manufacturer pricing with no middleman markup. Special discounted rates applied for schools, colleges & bulk orders.
+              </div>
+            </div>
+
+            <div style="display: flex; flex-direction: column; gap: 0.75rem;">
+              <button class="btn btn-primary" onclick="addCalculatedOrderToCart()">
+                <i class="fa-solid fa-cart-shopping"></i> Add Custom Spec to Order
+              </button>
+              <button class="btn btn-whatsapp" id="sendWhatsAppOrderBtn" onclick="sendOrderToWhatsApp()">
+                <i class="fa-brands fa-whatsapp" style="font-size: 1.2rem;"></i> Request Quote on WhatsApp (+91 98491 40554)
+              </button>
+              <button class="btn btn-outline" style="color: #fff; border-color: rgba(255,255,255,0.3);" onclick="printEstimate()">
+                <i class="fa-solid fa-print"></i> Print / Save Specification PDF
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICES & PRODUCTS SECTION -->
+    <section class="section" id="services">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">
+            <i class="fa-solid fa-layer-group"></i>
+            <span>OUR CORE SPECIALTIES</span>
+          </div>
+          <h2 class="section-title">Comprehensive Binding & Paper Manufacturing</h2>
+          <div class="section-subtitle-telugu telugu-font">
+            పుస్తకాలు, లెడ్జర్లు, నోట్ బుక్స్ మరియు బైండింగ్ సేవల సమగ్ర శ్రేణి
+          </div>
+          <p class="section-desc">
+            Equipped with industrial paper cutting guillotines, heavy-duty thread stitchers, thermal laminators, and hot-foil stamping presses to deliver impeccable durability.
+          </p>
+        </div>
+
+        <!-- Filter Navigation -->
+        <div class="services-filter-nav">
+          <button class="filter-btn active" data-filter="all" onclick="filterServices('all', this)">All Offerings</button>
+          <button class="filter-btn" data-filter="binding" onclick="filterServices('binding', this)">Book Binding</button>
+          <button class="filter-btn" data-filter="registers" onclick="filterServices('registers', this)">Account Ledgers</button>
+          <button class="filter-btn" data-filter="notebooks" onclick="filterServices('notebooks', this)">Note Books & Pads</button>
+          <button class="filter-btn" data-filter="gift" onclick="filterServices('gift', this)">Gift Covers & Envelopes</button>
+          <button class="filter-btn" data-filter="wholesale" onclick="filterServices('wholesale', this)">Wholesale Stationery</button>
+        </div>
+
+        <!-- Services Cards Grid -->
+        <div class="services-grid" id="servicesGrid">
+          
+          <!-- Card 1 -->
+          <article class="service-card" data-category="binding">
+            <div>
+              <div class="service-card-top">
+                <div class="service-icon-box">
+                  <i class="fa-solid fa-book"></i>
+                </div>
+                <span class="service-badge">Students & Legal</span>
+              </div>
+              <h3>Hardcover Rexine & Thesis Binding</h3>
+              <div class="service-card-telugu telugu-font">హార్డ్ కవర్ & ప్రాజెక్ట్ థీసిస్ బైండింగ్</div>
+              <p>
+                Flawless gold or silver foil letter stamping on premium maroon, navy, or black rexine leatherette. Ideal for PhD dissertations, engineering projects, law records, and council archives.
+              </p>
+              <ul class="service-features-list">
+                <li><i class="fa-solid fa-circle-check"></i> 100% University & College Regulation Compliant</li>
+                <li><i class="fa-solid fa-circle-check"></i> High-Grade Golden Leaf Foil Hot Stamping</li>
+                <li><i class="fa-solid fa-circle-check"></i> Satin Bookmark Ribbon & Metal Corner Guards</li>
+                <li><i class="fa-solid fa-circle-check"></i> Same-Day Emergency Submission Turnaround</li>
+              </ul>
+            </div>
+            <div class="service-card-footer">
+              <div class="service-price-hint">
+                Specifications
+                <strong>Gold Embossed Rexine</strong>
+              </div>
+              <button class="btn btn-primary btn-sm" onclick="buyNow('Hardcover Thesis Binding', 'assets/images/storefront-entrance.jpg', 'Binding Service', true)">
+                Order / Inquire <i class="fa-solid fa-arrow-right"></i>
+              </button>
+            </div>
+          </article>
+
+          <!-- Card 2 -->
+          <article class="service-card" data-category="binding">
+            <div>
+              <div class="service-card-top">
+                <div class="service-icon-box">
+                  <i class="fa-solid fa-arrows-split-up-and-left"></i>
+                </div>
+                <span class="service-badge">Corporate & Fast</span>
+              </div>
+              <h3>Spiral, Wire-O & Comb Binding</h3>
+              <div class="service-card-telugu telugu-font">స్పైరల్ & వైర్-ఓ ప్రాజెక్ట్ బైండింగ్</div>
+              <p>
+                Flexible 360-degree lay-flat binding for seminar reports, user manuals, training documents, and architectural presentations with crystal-clear protective PVC covers.
+              </p>
+              <ul class="service-features-list">
+                <li><i class="fa-solid fa-circle-check"></i> Heavy Gauge Wire-O or Flexible PVC Coils</li>
+                <li><i class="fa-solid fa-circle-check"></i> Thick Frosted or High-Gloss Protective Sheets</li>
+                <li><i class="fa-solid fa-circle-check"></i> Instant while-you-wait execution in store</li>
+                <li><i class="fa-solid fa-circle-check"></i> Capacity up to 500 sheets securely bound</li>
+              </ul>
+            </div>
+            <div class="service-card-footer">
+              <div class="service-price-hint">
+                Turnaround
+                <strong>While You Wait</strong>
+              </div>
+              <button class="btn btn-primary btn-sm" onclick="buyNow('Spiral Project Binding', 'assets/images/storefront-entrance.jpg', 'Binding Service', true)">
+                Order / Inquire <i class="fa-solid fa-arrow-right"></i>
+              </button>
+            </div>
+          </article>
+
+          <!-- Card 3 -->
+          <article class="service-card" data-category="registers">
+            <div>
+              <div class="service-card-top">
+                <div class="service-icon-box">
+                  <i class="fa-solid fa-scale-balanced"></i>
+                </div>
+                <span class="service-badge">Commercial</span>
+              </div>
+              <h3>Account Books & Marble Registers</h3>
+              <div class="service-card-telugu telugu-font">మార్బుల్ బైండింగ్ & అకౌంట్ లెడ్జర్లు</div>
+              <p>
+                Authentic handcrafted marble-bound registers (మార్బుల్ బైండింగ్) for merchants, wholesale traders in Kaleswara Rao Market, and CA offices. Heavy thread-stitched spines built to last decades.
+              </p>
+              <ul class="service-features-list">
+                <li><i class="fa-solid fa-circle-check"></i> Cash Books, Day Books, Stock & Attendance Ledgers</li>
+                <li><i class="fa-solid fa-circle-check"></i> Durable Marble Paper Bound Hardboards</li>
+                <li><i class="fa-solid fa-circle-check"></i> Pre-Numbered Ledger Ruled Pages (80 GSM)</li>
+                <li><i class="fa-solid fa-circle-check"></i> Reinforced Canvas Cloth Spines</li>
+              </ul>
+            </div>
+            <div class="service-card-footer">
+              <div class="service-price-hint">
+                Availability
+                <strong>Retail & Wholesale Stock</strong>
+              </div>
+              <button class="btn btn-primary btn-sm" onclick="buyNow('Commercial Marble Ledger (200 Pgs)', 'assets/images/storefront-entrance.jpg', 'Ledgers')">
+                Order / Inquire <i class="fa-solid fa-arrow-right"></i>
+              </button>
+            </div>
+          </article>
+
+          <!-- Card 4 -->
+          <article class="service-card" data-category="notebooks">
+            <div>
+              <div class="service-card-top">
+                <div class="service-icon-box">
+                  <i class="fa-solid fa-pen-to-square"></i>
+                </div>
+                <span class="service-badge">School & College</span>
+              </div>
+              <h3>Manufactured Note Books & Rough Pads</h3>
+              <div class="service-card-telugu telugu-font">స్కూల్ నోట్ బుక్స్, కుట్టు పుస్తకాలు & రఫ్ ప్యాడ్లు</div>
+              <p>
+                In-house manufacturing of stitched notebooks (కుట్టు పుస్తకాలు), long notebooks, single-rule, four-rule, maths square ruled, drawing books, and high-volume student rough books.
+              </p>
+              <ul class="service-features-list">
+                <li><i class="fa-solid fa-circle-check"></i> High Brightness, Smudge-Free Smooth Paper</li>
+                <li><i class="fa-solid fa-circle-check"></i> Sturdy Pin & Center-Thread Machine Stitching</li>
+                <li><i class="fa-solid fa-circle-check"></i> Attractive Laminated Cover Designs</li>
+                <li><i class="fa-solid fa-circle-check"></i> Custom School / College Logo Cover Printing</li>
+              </ul>
+            </div>
+            <div class="service-card-footer">
+              <div class="service-price-hint">
+                Wholesale Bundles
+                <strong>Direct Factory Supply</strong>
+              </div>
+              <button class="btn btn-primary btn-sm" onclick="buyNow('School Note Books (12 Pack)', 'assets/images/interior-aisle-stock.jpg', 'Note Books')">
+                Order / Inquire <i class="fa-solid fa-arrow-right"></i>
+              </button>
+            </div>
+          </article>
+
+          <!-- Card 5 -->
+          <article class="service-card" data-category="gift">
+            <div>
+              <div class="service-card-top">
+                <div class="service-icon-box">
+                  <i class="fa-solid fa-envelope-open-text"></i>
+                </div>
+                <span class="service-badge">Traditional & Festive</span>
+              </div>
+              <h3>Money Gift Covers & Envelopes</h3>
+              <div class="service-card-telugu telugu-font">మనీ గఇఫ్ట్ కవర్లు & వెడ్డింగ్ శుభలేఖ ఎన్వెలప్స్</div>
+              <p>
+                Exquisite festive, auspicious, and wedding money presentation covers (Shagun envelopes). Metallic embossing, traditional Telugu motifs, gold foil ornamentation, and official office envelopes.
+              </p>
+              <ul class="service-features-list">
+                <li><i class="fa-solid fa-circle-check"></i> Traditional Golden Floral, Peacock & Deity Prints</li>
+                <li><i class="fa-solid fa-circle-check"></i> Premium Handmade & Imported Textured Paper</li>
+                <li><i class="fa-solid fa-circle-check"></i> Available in Packs of 10, 25, 50, 100, and Bulk Wholesale</li>
+                <li><i class="fa-solid fa-circle-check"></i> Custom Name & House Warming Monogram Print</li>
+              </ul>
+            </div>
+            <div class="service-card-footer">
+              <div class="service-price-hint">
+                Packaging Options
+                <strong>Packs of 10, 25, 50, 100</strong>
+              </div>
+              <button class="btn btn-primary btn-sm" onclick="buyNow('Wedding Money Gift Covers (25 Pcs)', 'assets/images/interior-aisle-stock.jpg', 'Gift Covers')">
+                Order / Inquire <i class="fa-solid fa-arrow-right"></i>
+              </button>
+            </div>
+          </article>
+
+          <!-- Card 6 -->
+          <article class="service-card" data-category="wholesale">
+            <div>
+              <div class="service-card-top">
+                <div class="service-icon-box">
+                  <i class="fa-solid fa-boxes-stacked"></i>
+                </div>
+                <span class="service-badge">Distributor</span>
+              </div>
+              <h3>Wholesale Paper, Pens & Stationery</h3>
+              <div class="service-card-telugu telugu-font">హోల్‌సేల్ పేపర్ రీమ్స్, స్టేషనరీ & ఆఫీస్ సప్లైస్</div>
+              <p>
+                Distributor of A4/FS photocopy paper reams (JK Copier, TNPL, Bilt), Casio commercial calculators, Hauser/Reynolds pens, Camlin supplies, files, folders, and bill book duplicate printing.
+              </p>
+              <ul class="service-features-list">
+                <li><i class="fa-solid fa-circle-check"></i> 70/75/80 GSM High-Speed Copier Paper Bundles</li>
+                <li><i class="fa-solid fa-circle-check"></i> Casio Check & Correct Office Calculators</li>
+                <li><i class="fa-solid fa-circle-check"></i> Hauser, Doms, Apsara, Reynolds & Camlin Stocks</li>
+                <li><i class="fa-solid fa-circle-check"></i> Immediate Stock Pick-Up in One Town Market</li>
+              </ul>
+            </div>
+            <div class="service-card-footer">
+              <div class="service-price-hint">
+                Distribution
+                <strong>Wholesale & Retail B2B</strong>
+              </div>
+              <button class="btn btn-primary btn-sm" onclick="buyNow('JK Copier A4 Ream (75 GSM)', 'assets/images/interior-aisle-stock.jpg', 'Paper')">
+                Order / Inquire <i class="fa-solid fa-arrow-right"></i>
+              </button>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- AUTHENTIC GOOGLE MAPS PHOTO GALLERY -->
+    <section class="section section-alt" id="gallery">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">
+            <i class="fa-solid fa-images"></i>
+            <span>AUTHENTIC VISUAL ARCHIVE</span>
+          </div>
+          <h2 class="section-title">Step Inside Nava Jyothi Binding Works</h2>
+          <div class="section-subtitle-telugu telugu-font">
+            షాప్ దృశ్యాలు, స్టోర్‌ఫ్రంట్ మరియు బైండింగ్ పరిశ్రమ ఫోటోలు
+          </div>
+          <p class="section-desc">
+            Direct photographs from our verified Google Maps listing showing our storefront on Pulipativari Street, vibrant aisles loaded with stationery, and book manufacturing inventory.
+          </p>
+        </div>
+
+        <div class="gallery-grid">
+          <!-- Photo 1: Storefront Entrance -->
+          <div class="gallery-item gallery-col-6" onclick="openLightbox('assets/images/storefront-entrance.jpg', 'Storefront Entrance & Signboard - Showing door number 11-40-54, Pulipativari St, landline numbers 2421973/2423544/2561973, mobile 9849140554, and authentic Telugu signage.')">
+            <img src="assets/images/storefront-entrance.jpg" alt="Nava Jyothi Binding Works Storefront on Pulipativari Street">
+            <span class="gallery-badge"><i class="fa-solid fa-store"></i> Storefront & Signboard</span>
+            <div class="gallery-overlay">
+              <h4>Main Storefront Entrance</h4>
+              <p>Authentic board with bilingual Telugu & English script, telephone contacts, and notebook stacks.</p>
+            </div>
+          </div>
+
+          <!-- Photo 2: Interior Aisles & Stock -->
+          <div class="gallery-item gallery-col-6" onclick="openLightbox('assets/images/interior-aisle-stock.jpg', 'Interior Shop View - Towering shelves stacked to the ceiling with notebooks, Camlin & Apsara art materials, Casio calculators, and the founder\'s garlanded portrait.')">
+            <img src="assets/images/interior-aisle-stock.jpg" alt="Interior aisle of stationery and notebooks at Nava Jyothi Binding Works">
+            <span class="gallery-badge"><i class="fa-solid fa-box-archive"></i> Inside The Shop</span>
+            <div class="gallery-overlay">
+              <h4>Extensive Stationery & Book Aisles</h4>
+              <p>Ceiling-high shelves loaded with registers, student notebooks, Camlin, Casio, and paper stock.</p>
+            </div>
+          </div>
+
+          <!-- Photo 3: Street View Context -->
+          <div class="gallery-item gallery-col-6" onclick="openLightbox('assets/images/street-view-facade.jpg', 'Pulipativari Street View - The bustling market atmosphere near Kaleswara Rao Market and Tarapet, One Town, Vijayawada.')">
+            <img src="assets/images/street-view-facade.jpg" alt="Google Street View exterior perspective on Pulipativari Street">
+            <span class="gallery-badge"><i class="fa-solid fa-road"></i> Street View Context</span>
+            <div class="gallery-overlay">
+              <h4>Pulipativari Street Market</h4>
+              <p>Heart of Vijayawada's paper and wholesale trade corridor.</p>
+            </div>
+          </div>
+
+          <!-- Card 4: Wholesale Trade & Bulk Inquiries -->
+          <div class="gallery-item gallery-col-6" style="background: linear-gradient(135deg, #0b1528 0%, #1e3a8a 100%); display: flex; align-items: center; justify-content: center; text-align: center; padding: 2.5rem; color: #fff;">
+            <div>
+              <div style="width: 64px; height: 64px; background: rgba(245, 158, 11, 0.2); color: #f59e0b; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.8rem; margin: 0 auto 1rem;">
+                <i class="fa-solid fa-handshake-angle"></i>
+              </div>
+              <h3 style="font-size: 1.5rem; margin-bottom: 0.5rem; font-weight: 800;">Wholesale & Institutional Orders</h3>
+              <p style="font-size: 0.95rem; color: #cbd5e1; margin-bottom: 1.5rem; max-width: 440px; margin-left: auto; margin-right: auto;">
+                Are you a school, college, accounting firm, or stationery shop? Get direct factory wholesale supply and dealer pricing.
+              </p>
+              <a href="https://wa.me/919849140554?text=Hi%20Nava%20Jyothi%20Binding%20Works,%20we%20want%20to%20discuss%20bulk%20wholesale%20rates." target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                <i class="fa-brands fa-whatsapp"></i> Chat with Dealer Desk
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHY CHOOSE NAVA JYOTHI BINDING WORKS -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">
+            <i class="fa-solid fa-shield-check"></i>
+            <span>THE CRAFTSMAN ADVANTAGE</span>
+          </div>
+          <h2 class="section-title">Why Customers & Institutions Trust Us</h2>
+          <div class="section-subtitle-telugu telugu-font">
+            30+ సంవత్సరాల నాణ్యత, సరసమైన ధరలు మరియు సమయపాలన
+          </div>
+        </div>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.75rem;">
+          <div class="service-card" style="padding: 1.75rem;">
+            <div class="service-icon-box" style="margin-bottom: 1rem;">
+              <i class="fa-solid fa-stamp"></i>
+            </div>
+            <h4>Hot Foil Stamping Precision</h4>
+            <p style="font-size: 0.9rem; color: var(--text-muted); margin-top: 0.5rem;">
+              Using hardened brass typesetting dies and high-heat golden foil, our title embossing never peels, flakes, or fades over time.
+            </p>
+          </div>
+
+          <div class="service-card" style="padding: 1.75rem;">
+            <div class="service-icon-box" style="margin-bottom: 1rem;">
+              <i class="fa-solid fa-scissors"></i>
+            </div>
+            <h4>Industrial Guillotine Trimming</h4>
+            <p style="font-size: 0.9rem; color: var(--text-muted); margin-top: 0.5rem;">
+              Razor-clean page edges and millimeter-precise corner alignment that elevates student reports to executive presentation caliber.
+            </p>
+          </div>
+
+          <div class="service-card" style="padding: 1.75rem;">
+            <div class="service-icon-box" style="margin-bottom: 1rem;">
+              <i class="fa-solid fa-credit-card"></i>
+            </div>
+            <h4>Instant Online UPI & Card Payments</h4>
+            <p style="font-size: 0.9rem; color: var(--text-muted); margin-top: 0.5rem;">
+              Order thesis bindings or school notebooks from anywhere. Pay in seconds using PhonePe, Google Pay, Paytm, or Card with verified receipts.
+            </p>
+          </div>
+
+          <div class="service-card" style="padding: 1.75rem;">
+            <div class="service-icon-box" style="margin-bottom: 1rem;">
+              <i class="fa-solid fa-tags"></i>
+            </div>
+            <h4>Direct Manufacturer Pricing</h4>
+            <p style="font-size: 0.9rem; color: var(--text-muted); margin-top: 0.5rem;">
+              Because we manufacture notebooks and bind on-premises, our rates cut out middlemen, delivering maximum savings to students & businesses.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- VERIFIED GOOGLE MAPS REVIEWS -->
+    <section class="section section-alt" id="reviews">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">
+            <i class="fa-brands fa-google"></i>
+            <span>AUTHENTIC FEEDBACK</span>
+          </div>
+          <h2 class="section-title">Verified Google Maps Reviews</h2>
+          <div class="section-subtitle-telugu telugu-font">
+            మా కస్టమర్ల అనుభవాలు మరియు నిజమైన రేటింగ్‌లు
+          </div>
+          <p class="section-desc">
+            Real customer impressions from Google Maps highlighting our service speed, paper quality, and dependable craftsmanship.
+          </p>
+        </div>
+
+        <div class="reviews-grid">
+          <!-- Review 1 -->
+          <div class="review-card">
+            <div>
+              <div class="review-author">
+                <img src="https://lh3.googleusercontent.com/a-/ALV-UjWlC0IvQjhR2a_mZWdFIPyrzFAxTvvCdnLlcvDIZxjZURQAOxtUEw=w64-h64-p-rp-mo-ba12-br100" alt="mahendar achhpeliya - Google Local Guide" class="author-avatar" onerror="this.src='https://ui-avatars.com/api/?name=Mahendar+Achhpeliya&background=f59e0b&color=fff'">
+                <div class="author-info">
+                  <h4>mahendar achhpeliya</h4>
+                  <div class="author-badge">
+                    <i class="fa-solid fa-shield"></i> Local Guide · 34 reviews · 43 photos
+                  </div>
+                </div>
+              </div>
+              <div class="stars" style="margin-bottom: 0.85rem;">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+              <p class="review-body">
+                "One of the oldest and most reliable binding shops in One Town, Vijayawada. They have a huge variety of notebooks, ledger registers, and prompt binding service. Excellent workmanship on hard bound books!"
+              </p>
+            </div>
+            <div class="review-footer">
+              <span>Google Maps Verified Review</span>
+              <span><i class="fa-regular fa-clock"></i> Local Guide</span>
+            </div>
+          </div>
+
+          <!-- Review 2 -->
+          <div class="review-card">
+            <div>
+              <div class="review-author">
+                <img src="https://lh3.googleusercontent.com/a-/ALV-UjVV9NG57kEWurLIV2TIXgw5HeV0m1Uutv9iarJnJLdWJwuFYiBRYA=w64-h64-p-rp-mo-br100" alt="Vivek thallam - Reviewer" class="author-avatar" onerror="this.src='https://ui-avatars.com/api/?name=Vivek+Thallam&background=1e3a8a&color=fff'">
+                <div class="author-info">
+                  <h4>Vivek thallam</h4>
+                  <div class="author-badge">
+                    <i class="fa-solid fa-circle-check"></i> 188 reviews on Google Maps
+                  </div>
+                </div>
+              </div>
+              <div class="stars" style="margin-bottom: 0.85rem;">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+              </div>
+              <p class="review-body">
+                "Great place in the Pulipativari Street market for student notebooks, project bindings, and stationery. Fast turnaround and very polite customer handling. Quality and service are excellent compared to other markets."
+              </p>
+            </div>
+            <div class="review-footer">
+              <span>Google Maps Verified Review</span>
+              <span><i class="fa-regular fa-clock"></i> Active Reviewer</span>
+            </div>
+          </div>
+
+          <!-- Review 3 -->
+          <div class="review-card">
+            <div>
+              <div class="review-author">
+                <img src="https://lh3.googleusercontent.com/a-/ALV-UjWh_Zmkc20q-OFe-pbFq7yParvYeAQKCSjOPoxGGM0Oyq5EOmwg=w64-h64-p-rp-mo-br100" alt="Rupesh Sai - Reviewer" class="author-avatar" onerror="this.src='https://ui-avatars.com/api/?name=Rupesh+Sai&background=10b981&color=fff'">
+                <div class="author-info">
+                  <h4>Rupesh Sai</h4>
+                  <div class="author-badge">
+                    <i class="fa-solid fa-circle-check"></i> Contributor · 10 photos
+                  </div>
+                </div>
+              </div>
+              <div class="stars" style="margin-bottom: 0.85rem;">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+              </div>
+              <p class="review-body">
+                "Best place for book binding and stationery needs in Vijayawada! They did our project work binding neatly with gold letters. Highly satisfied with their service."
+              </p>
+            </div>
+            <div class="review-footer">
+              <span>Google Maps Verified Review</span>
+              <span><i class="fa-regular fa-clock"></i> Project Student</span>
+            </div>
+          </div>
+        </div>
+
+        <div style="text-align: center; margin-top: 2.5rem;">
+          <a href="https://www.google.com/maps/place/Nava+Jyothi+Binding+Works/@16.5141945,80.6080327,890m/data=!3m1!1e3!4m6!3m5!1s0x3a35efe064edd6d5:0xef2914bc3e58b458!8m2!3d16.5141582!4d80.610601!16s%2Fg%2F1q62hq3cl?entry=ttu" target="_blank" rel="noopener noreferrer" class="btn btn-navy">
+            <i class="fa-brands fa-google"></i> Leave a Review on Google Maps
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- LOCATION & DIRECTIONS SECTION -->
+    <section class="section" id="location">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">
+            <i class="fa-solid fa-location-crosshairs"></i>
+            <span>HOW TO FIND US</span>
+          </div>
+          <h2 class="section-title">Visit Our Shop in One Town, Vijayawada</h2>
+          <div class="section-subtitle-telugu telugu-font">
+            పులిపాటివారి వీధి, కాలేశ్వరరావు మార్కెట్ సమీపంలో, విజయవాడ
+          </div>
+          <p class="section-desc">
+            Centrally located in Vijayawada's historic commercial hub, just 5 minutes from Samarangam Chowk and 1.5 km from the Vijayawada Railway Station.
+          </p>
+        </div>
+
+        <div class="location-grid">
+          <!-- Location Details & Contact Form -->
+          <div class="location-info-card">
+            <div>
+              <h3 style="font-size: 1.45rem; font-weight: 800; margin-bottom: 0.5rem; color: var(--text-main);">
+                Contact & Store Hours
+              </h3>
+              <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 1.5rem;">
+                Visit us for direct drop-off, wholesale collection, or call us ahead for rush processing.
+              </p>
+
+              <div class="contact-detail-items">
+                <!-- Address -->
+                <div class="contact-item">
+                  <div class="contact-icon">
+                    <i class="fa-solid fa-map-location-dot"></i>
+                  </div>
+                  <div class="contact-text">
+                    <h5>Official Shop Address</h5>
+                    <p>
+                      <strong>Nava Jyothi Binding Works</strong><br>
+                      D.No: 11-40-54, Pulipativari Street (పులిపాటివారి వీధి),<br>
+                      One Town, Kaleswara Rao Market, Tarapet,<br>
+                      Vijayawada, Andhra Pradesh - 520001
+                    </p>
+                  </div>
+                </div>
+
+                <!-- Phone -->
+                <div class="contact-item">
+                  <div class="contact-icon">
+                    <i class="fa-solid fa-phone"></i>
+                  </div>
+                  <div class="contact-text">
+                    <h5>Phone & WhatsApp</h5>
+                    <p>
+                      <strong>Mobile:</strong> <a href="tel:+919849140554">+91 98491 40554</a> / <a href="tel:09849140554">098491 40554</a><br>
+                      <strong>Landlines:</strong> <a href="tel:08662421973">0866-2421973</a>, <a href="tel:08662423544">2423544</a>, <a href="tel:08662561973">2561973</a><br>
+                      <strong>WhatsApp Order Desk:</strong> <a href="https://wa.me/919849140554" target="_blank" rel="noopener noreferrer">+91 98491 40554</a>
+                    </p>
+                  </div>
+                </div>
+
+                <!-- Hours -->
+                <div class="contact-item">
+                  <div class="contact-icon">
+                    <i class="fa-solid fa-clock"></i>
+                  </div>
+                  <div class="contact-text">
+                    <h5>Operating Hours</h5>
+                    <p>
+                      <strong>Monday – Saturday:</strong> 10:00 AM – 10:00 PM<br>
+                      <strong>Sunday:</strong> 10:00 AM – 02:00 PM (Wholesale & Urgent Dispatches)<br>
+                      <span class="live-indicator" style="margin-top: 0.35rem;">
+                        <span class="pulse-dot"></span> Open Today
+                      </span>
+                    </p>
+                  </div>
+                </div>
+
+                <!-- Tax & Verification -->
+                <div class="contact-item">
+                  <div class="contact-icon">
+                    <i class="fa-solid fa-file-invoice"></i>
+                  </div>
+                  <div class="contact-text">
+                    <h5>GST & Location Identification</h5>
+                    <p>
+                      <strong>GSTIN:</strong> 37ABJPT9160G1ZZ<br>
+                      <strong>Plus Code:</strong> GJ76+M6 Vijayawada, Andhra Pradesh<br>
+                      <strong>Google Knowledge Graph ID:</strong> /g/1q62hq3cl
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Quick Action Buttons -->
+            <div style="display: flex; gap: 0.75rem; flex-wrap: wrap; padding-top: 1.5rem; border-top: 1px solid var(--border-color);">
+              <a href="https://www.google.com/maps/dir//Nava+Jyothi+Binding+Works,+11-40-54,+Pulipativari+St,+1+Town,+Kaleswara+Rao+Market,+Tarapet,+Vijayawada,+Andhra+Pradesh+520001/@16.5141582,80.610601,17z" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="flex: 1;">
+                <i class="fa-solid fa-diamond-turn-right"></i> Navigate on Google Maps
+              </a>
+              <a href="tel:+919849140554" class="btn btn-navy">
+                <i class="fa-solid fa-phone"></i> Call Store
+              </a>
+            </div>
+          </div>
+
+          <!-- Interactive Map Container (Guaranteed 100% Reliable, Never Blank) -->
+          <div class="map-container-wrapper" style="position: relative; height: 100%; min-height: 480px;">
+            <div id="interactiveMap" style="width: 100%; height: 100%; min-height: 480px; z-index: 1;"></div>
+            
+            <!-- Map Overlay Card -->
+            <div style="position: absolute; bottom: 1.25rem; left: 1.25rem; right: 1.25rem; z-index: 500; background: rgba(11, 21, 40, 0.92); backdrop-filter: blur(10px); padding: 1rem 1.25rem; border-radius: var(--radius-md); display: flex; align-items: center; justify-content: space-between; gap: 1rem; flex-wrap: wrap; border: 1.5px solid var(--accent-gold); box-shadow: var(--shadow-lg);">
+              <div style="color: #ffffff;">
+                <div style="font-weight: 800; font-size: 0.95rem; display: flex; align-items: center; gap: 0.4rem;">
+                  <i class="fa-solid fa-location-dot" style="color: #ef4444;"></i> Nava Jyothi Binding Works
+                </div>
+                <div style="font-size: 0.8rem; color: #cbd5e1; margin-top: 0.15rem;">
+                  #11-40-54, Pulipativari St, One Town, Vijayawada - 520001
+                </div>
+              </div>
+              <a href="https://www.google.com/maps/place/Nava+Jyothi+Binding+Works/@16.5141582,80.610601,17z" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> Open Google Maps App
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Direct Contact Form -->
+        <div style="margin-top: 4rem; background: var(--bg-card); border-radius: var(--radius-lg); padding: 2.5rem; border: 1px solid var(--border-color); box-shadow: var(--shadow-md);">
+          <div style="text-align: center; max-width: 600px; margin: 0 auto 2rem;">
+            <h3 style="font-size: 1.6rem; font-weight: 800; color: var(--text-main);">Have a Custom Question or Bulk Order?</h3>
+            <p style="font-size: 0.95rem; color: var(--text-muted); margin-top: 0.35rem;">
+              Fill in your requirement below and send it directly to our team via WhatsApp or message.
+            </p>
+          </div>
+
+          <form id="quickContactForm" onsubmit="handleContactSubmit(event)" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.25rem;">
+            <div class="calc-group">
+              <label class="calc-label" for="custName">Your Full Name</label>
+              <input type="text" id="custName" required placeholder="e.g. Ramesh Kumar" class="calc-input">
+            </div>
+
+            <div class="calc-group">
+              <label class="calc-label" for="custPhone">Phone / WhatsApp Number</label>
+              <input type="tel" id="custPhone" required placeholder="e.g. 98490 12345" class="calc-input">
+            </div>
+
+            <div class="calc-group">
+              <label class="calc-label" for="custCategory">Requirement Type</label>
+              <select id="custCategory" class="calc-select">
+                <option value="Thesis Binding">College Project / Thesis Binding</option>
+                <option value="Spiral Binding">Spiral / Wire-O Binding</option>
+                <option value="School Notebooks">School / College Notebooks Bulk</option>
+                <option value="Account Ledgers">Commercial Account Books & Ledgers</option>
+                <option value="Money Covers">Shagun & Money Gift Covers</option>
+                <option value="Paper & Stationery">Wholesale Paper Reams & Stationery</option>
+              </select>
+            </div>
+
+            <div class="calc-group" style="grid-column: 1 / -1;">
+              <label class="calc-label" for="custMsg">Details / Special Instructions</label>
+              <textarea id="custMsg" rows="3" placeholder="Tell us page count, number of copies, delivery date or questions..." class="calc-input" style="resize: vertical;"></textarea>
+            </div>
+
+            <div style="grid-column: 1 / -1; display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
+              <button type="submit" class="btn btn-whatsapp btn-lg">
+                <i class="fa-brands fa-whatsapp"></i> Submit Directly to WhatsApp Desk
+              </button>
+              <button type="button" onclick="copyContactDraft()" class="btn btn-outline btn-lg">
+                <i class="fa-regular fa-clipboard"></i> Copy Message Text
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==========================================================================
+       CART SLIDE-OVER DRAWER
+       ========================================================================== -->
+  <div class="cart-drawer-backdrop" id="cartBackdrop" onclick="toggleCartDrawer(event)">
+    <div class="cart-drawer" onclick="event.stopPropagation()">
+      <div class="cart-header">
+        <h3><i class="fa-solid fa-bag-shopping" style="color: var(--accent-gold);"></i> Your Shopping Cart</h3>
+        <button class="cart-close-btn" onclick="toggleCartDrawer()" aria-label="Close Cart">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+
+      <!-- Items List -->
+      <div class="cart-items-container" id="cartItemsContainer">
+        <!-- Injected dynamically via JS -->
+      </div>
+
+      <!-- Cart Footer / Summary -->
+      <div class="cart-footer" id="cartFooter">
+        <div class="cart-total-line">
+          <span>Items Selected:</span>
+          <strong id="cartSubtotal">0 Items</strong>
+        </div>
+        <div class="cart-total-line">
+          <span>Fulfillment Method:</span>
+          <select id="cartFulfillment" class="calc-select" style="padding: 0.35rem 0.6rem; font-size: 0.85rem;" onchange="updateCartTotals()">
+            <option value="pickup">Store Pickup (Pulipativari St, 1 Town)</option>
+            <option value="delivery">Home / Office Delivery (Vijayawada & AP)</option>
+          </select>
+        </div>
+        <div class="cart-total-line grand">
+          <span>Order Category:</span>
+          <strong id="cartGrandTotal" style="color: var(--accent-gold);">Direct Wholesale / Retail Order</strong>
+        </div>
+
+        <button class="btn btn-primary btn-lg" style="width: 100%; margin-top: 0.5rem;" onclick="proceedToCheckout()">
+          <i class="fa-solid fa-circle-check"></i> Proceed to Order Placement
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       ONLINE PAYMENT & CHECKOUT MODAL
+       ========================================================================== -->
+  <div class="modal-backdrop" id="checkoutModal">
+    <div class="modal-dialog checkout-modal-dialog">
+      <button class="modal-close-btn" onclick="closeCheckoutModal()" aria-label="Close Checkout">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+
+      <div class="checkout-steps-bar">
+        <div class="step-indicator active" id="step1Indicator">
+          <div class="step-num">1</div>
+          <span>Customer & Address</span>
+        </div>
+        <div class="step-indicator" id="step2Indicator">
+          <div class="step-num">2</div>
+          <span>Online Payment</span>
+        </div>
+        <div class="step-indicator" id="step3Indicator">
+          <div class="step-num">3</div>
+          <span>Order Confirmation</span>
+        </div>
+      </div>
+
+      <!-- Step 1: Customer Details -->
+      <div id="checkoutStep1">
+        <h3 style="font-size: 1.35rem; font-weight: 800; margin-bottom: 0.5rem;">Customer & Delivery Details</h3>
+        <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 1.5rem;">Please provide your contact details for order processing and delivery alerts.</p>
+
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1rem;">
+          <div class="calc-group">
+            <label class="calc-label" for="chkName">Full Name *</label>
+            <input type="text" id="chkName" placeholder="e.g. S. Venkat" class="calc-input" required>
+          </div>
+          <div class="calc-group">
+            <label class="calc-label" for="chkPhone">WhatsApp / Mobile *</label>
+            <input type="tel" id="chkPhone" placeholder="e.g. 98491 40554" class="calc-input" required>
+          </div>
+        </div>
+
+        <div class="calc-group" style="margin-bottom: 1rem;">
+          <label class="calc-label" for="chkEmail">Email Address (For Tax Invoice)</label>
+          <input type="email" id="chkEmail" placeholder="e.g. venkat@gmail.com" class="calc-input">
+        </div>
+
+        <div class="calc-group" style="margin-bottom: 1.5rem;">
+          <label class="calc-label" for="chkAddress">Delivery Address / Landmark (If Home Delivery)</label>
+          <textarea id="chkAddress" rows="2" placeholder="House/Flat No, Colony, City, Pincode" class="calc-input" style="resize: vertical;"></textarea>
+        </div>
+
+        <div style="display: flex; justify-content: flex-end; gap: 1rem;">
+          <button class="btn btn-outline" onclick="closeCheckoutModal()">Cancel</button>
+          <button class="btn btn-primary" onclick="goToCheckoutStep2()">
+            Continue to Payment <i class="fa-solid fa-arrow-right"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Step 2: Payment Options -->
+      <div id="checkoutStep2" style="display: none;">
+        <h3 style="font-size: 1.35rem; font-weight: 800; margin-bottom: 0.25rem;">Order Confirmation & Payment Mode</h3>
+        <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 1.25rem;">
+          Order Details: <strong id="chkPayableAmount" style="color: var(--accent-gold); font-size: 1.05rem;">Direct Shop Order</strong>
+        </p>
+
+        <!-- Payment Tabs -->
+        <div class="payment-methods-grid">
+          <button class="payment-tab-btn active" id="tabUpi" onclick="selectPaymentTab('upi')">
+            <i class="fa-solid fa-qrcode"></i>
+            <span>UPI Instant Pay (QR)</span>
+          </button>
+          <button class="payment-tab-btn" id="tabCard" onclick="selectPaymentTab('card')">
+            <i class="fa-solid fa-credit-card"></i>
+            <span>Debit / Credit Card</span>
+          </button>
+          <button class="payment-tab-btn" id="tabCod" onclick="selectPaymentTab('cod')">
+            <i class="fa-solid fa-hand-holding-dollar"></i>
+            <span>Pay at Shop / COD</span>
+          </button>
+        </div>
+
+        <!-- UPI Tab Content -->
+        <div id="paymentContentUpi" class="upi-pay-box">
+          <div class="upi-id-badge">
+            <i class="fa-solid fa-shield-check"></i> Verified Merchant UPI: 9849140554@ybl
+          </div>
+          <div style="font-size: 0.85rem; color: var(--text-muted);">
+            Scan this QR code using Google Pay, PhonePe, Paytm, or BHIM to pay:
+          </div>
+
+          <div class="upi-qr-image-wrapper">
+            <!-- Dynamic QR Code pointing to shop UPI -->
+            <img id="dynamicUpiQr" src="https://api.qrserver.com/v1/create-qr-code/?size=180x180&data=upi://pay?pa=9849140554@ybl&pn=Nava%20Jyothi%20Binding%20Works&cu=INR" alt="UPI QR Code for Nava Jyothi Binding Works" style="width: 170px; height: 170px; display: block;">
+          </div>
+
+          <div style="display: flex; justify-content: center; gap: 0.75rem; flex-wrap: wrap; margin-bottom: 1rem;">
+            <a id="upiIntentLink" href="upi://pay?pa=9849140554@ybl&pn=Nava%20Jyothi%20Binding%20Works&cu=INR" class="btn btn-whatsapp btn-sm">
+              <i class="fa-solid fa-mobile-screen"></i> Pay via Mobile UPI App
+            </a>
+            <button class="btn btn-outline btn-sm" onclick="copyUpiId()">
+              <i class="fa-regular fa-copy"></i> Copy UPI ID
+            </button>
+          </div>
+
+          <div class="calc-group" style="text-align: left; max-width: 400px; margin: 0 auto;">
+            <label class="calc-label" for="upiRefId">Enter 12-Digit UPI Transaction / UTR No *</label>
+            <input type="text" id="upiRefId" placeholder="e.g. 4321 8765 9012" class="calc-input">
+          </div>
+        </div>
+
+        <!-- Card Tab Content -->
+        <div id="paymentContentCard" style="display: none; background: var(--bg-surface); padding: 1.5rem; border-radius: var(--radius-md); border: 1px solid var(--border-color); margin-bottom: 1.5rem;">
+          <div class="calc-group" style="margin-bottom: 1rem;">
+            <label class="calc-label">Cardholder Name</label>
+            <input type="text" id="cardName" placeholder="Name as printed on card" class="calc-input">
+          </div>
+          <div class="calc-group" style="margin-bottom: 1rem;">
+            <label class="calc-label">Card Number</label>
+            <input type="text" id="cardNumber" maxlength="19" placeholder="4532 •••• •••• 8821" class="calc-input">
+          </div>
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+            <div class="calc-group">
+              <label class="calc-label">Expiry (MM/YY)</label>
+              <input type="text" id="cardExpiry" maxlength="5" placeholder="12/28" class="calc-input">
+            </div>
+            <div class="calc-group">
+              <label class="calc-label">CVV</label>
+              <input type="password" id="cardCvv" maxlength="4" placeholder="•••" class="calc-input">
+            </div>
+          </div>
+          <p style="font-size: 0.78rem; color: #10b981; margin-top: 0.75rem;">
+            <i class="fa-solid fa-lock"></i> 256-bit TLS Encrypted Bank Level Simulation
+          </p>
+        </div>
+
+        <!-- COD Tab Content -->
+        <div id="paymentContentCod" style="display: none; background: var(--bg-surface); padding: 1.5rem; border-radius: var(--radius-md); border: 1px solid var(--border-color); margin-bottom: 1.5rem; text-align: center;">
+          <i class="fa-solid fa-store" style="font-size: 2.5rem; color: var(--accent-gold); margin-bottom: 0.75rem;"></i>
+          <h4>Pay In Cash When Picking Up At Store</h4>
+          <p style="font-size: 0.85rem; color: var(--text-muted); max-width: 420px; margin: 0.5rem auto 0;">
+            You can pay directly in cash, UPI, or card when you visit our shop at #11-40-54, Pulipativari Street, One Town, Vijayawada.
+          </p>
+        </div>
+
+        <div style="display: flex; justify-content: space-between; gap: 1rem;">
+          <button class="btn btn-outline" onclick="goToCheckoutStep1()">
+            <i class="fa-solid fa-arrow-left"></i> Back
+          </button>
+          <button class="btn btn-primary" onclick="processOrderPayment()">
+            <i class="fa-solid fa-circle-check"></i> Complete & Place Order
+          </button>
+        </div>
+      </div>
+
+      <!-- Step 3: Order Receipt & Confirmation -->
+      <div id="checkoutStep3" style="display: none;">
+        <div style="text-align: center; margin-bottom: 1.5rem;">
+          <div style="width: 56px; height: 56px; background: rgba(16, 185, 129, 0.15); color: #10b981; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.8rem; margin: 0 auto 0.75rem;">
+            <i class="fa-solid fa-circle-check"></i>
+          </div>
+          <h3 style="font-size: 1.5rem; font-weight: 800; color: var(--text-main);">Order Placed Successfully!</h3>
+          <p style="font-size: 0.9rem; color: var(--text-muted);">Thank you for choosing Nava Jyothi Binding Works, Vijayawada.</p>
+        </div>
+
+        <div class="receipt-box" id="printableReceipt">
+          <div class="receipt-header-brand">
+            <h4 style="font-size: 1.2rem; font-weight: 800; color: var(--text-main);">NAVA JYOTHI BINDING WORKS</h4>
+            <div class="telugu-font" style="color: var(--accent-amber); font-weight: 600;">నవ జ్యోతి బైండింగ్ వర్క్స్</div>
+            <p style="font-size: 0.78rem; color: var(--text-muted); margin-top: 0.2rem;">
+              D.No: 11-40-54, Pulipativari St, 1 Town, Vijayawada - 520001 | Phone: 098491 40554 | GSTIN: 37ABJPT9160G1ZZ
+            </p>
+          </div>
+
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; font-size: 0.85rem; margin-bottom: 1rem;">
+            <div><strong>Order ID:</strong> <span id="recOrderId">NJ-8491-001</span></div>
+            <div><strong>Date:</strong> <span id="recDate">Nov 18, 2026</span></div>
+            <div><strong>Customer:</strong> <span id="recName">Ramesh Kumar</span></div>
+            <div><strong>Phone:</strong> <span id="recPhone">98491 40554</span></div>
+            <div><strong>Payment Mode:</strong> <span id="recPaymentMode">UPI Instant Pay</span></div>
+            <div><strong>Status:</strong> <span style="color: #10b981; font-weight: 700;">CONFIRMED / PAID</span></div>
+          </div>
+
+          <div id="recItemsList" style="border-top: 1px dashed var(--border-color); border-bottom: 1px dashed var(--border-color); padding: 0.75rem 0; margin-bottom: 0.75rem;">
+            <!-- Items injected via JS -->
+          </div>
+
+          <div style="display: flex; justify-content: space-between; font-size: 1.1rem; font-weight: 800;">
+            <span>Order Total Items:</span>
+            <span id="recGrandTotal" style="color: var(--accent-gold);">0 Items</span>
+          </div>
+        </div>
+
+        <div style="display: flex; justify-content: center; gap: 0.75rem; flex-wrap: wrap;">
+          <button class="btn btn-whatsapp" onclick="sendOrderReceiptToWhatsApp()">
+            <i class="fa-brands fa-whatsapp"></i> Send Order Details to WhatsApp
+          </button>
+          <button class="btn btn-outline" onclick="printReceipt()">
+            <i class="fa-solid fa-print"></i> Print Receipt / PDF
+          </button>
+          <button class="btn btn-navy" onclick="closeCheckoutModal()">
+            Done & Continue Browsing
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- MASTER FOOTER -->
+  <footer class="main-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <!-- Col 1: Brand Info -->
+        <div class="footer-col">
+          <div class="brand-logo" style="margin-bottom: 1rem;">
+            <div class="logo-icon-wrapper" style="width: 40px; height: 40px; font-size: 1.15rem;">
+              <i class="fa-solid fa-book-bookmark"></i>
+            </div>
+            <div class="brand-text">
+              <div class="brand-title" style="color: #ffffff;">NAVA <span>JYOTHI</span></div>
+              <div class="brand-telugu telugu-font" style="color: var(--accent-gold);">నవ జ్యోతి బైండింగ్ వర్క్స్</div>
+            </div>
+          </div>
+          <p style="font-size: 0.9rem; color: #94a3b8; line-height: 1.6; margin-bottom: 1.25rem;">
+            Vijayawada's trusted bookbinding, notebook manufacturing, and wholesale stationery center. Committed to durability, precision, and reliable customer service.
+          </p>
+          <div style="font-size: 0.85rem; color: #cbd5e1; display: flex; flex-direction: column; gap: 0.35rem;">
+            <span><strong>GSTIN:</strong> 37ABJPT9160G1ZZ</span>
+            <span><strong>Google CID:</strong> 0x3a35efe064edd6d5:0xef2914bc3e58b458</span>
+          </div>
+        </div>
+
+        <!-- Col 2: Services -->
+        <div class="footer-col">
+          <h4>Services</h4>
+          <ul class="footer-links">
+            <li><a href="#services">Hardcover Thesis Binding</a></li>
+            <li><a href="#services">Spiral & Wire-O Binding</a></li>
+            <li><a href="#services">Marble Ledgers (మార్బుల్ బైండింగ్)</a></li>
+            <li><a href="#services">School Note Books (కుట్టు పుస్తకాలు)</a></li>
+            <li><a href="#services">Money Gift Covers & Envelopes</a></li>
+            <li><a href="#services">Wholesale Paper Reams</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Quick Links -->
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#shop">Buy Online Store</a></li>
+            <li><a href="#calculator">Order Specification Estimator</a></li>
+            <li><a href="#gallery">Authentic Shop Gallery</a></li>
+            <li><a href="#reviews">Verified Google Reviews</a></li>
+            <li><a href="#location">Store Location & Map</a></li>
+            <li><a href="https://www.google.com/maps/place/Nava+Jyothi+Binding+Works/@16.5141945,80.6080327,890m/data=!3m1!1e3!4m6!3m5!1s0x3a35efe064edd6d5:0xef2914bc3e58b458!8m2!3d16.5141582!4d80.610601!16s%2Fg%2F1q62hq3cl?entry=ttu" target="_blank" rel="noopener noreferrer">Google Maps Page</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Contact -->
+        <div class="footer-col">
+          <h4>Visit Store</h4>
+          <div style="font-size: 0.88rem; color: #94a3b8; display: flex; flex-direction: column; gap: 0.65rem;">
+            <p>
+              D.No: 11-40-54, Pulipativari St,<br>
+              One Town, Kaleswara Rao Market,<br>
+              Vijayawada, AP - 520001
+            </p>
+            <p>
+              <strong>Mobile:</strong> <a href="tel:+919849140554" style="color: #fff;">+91 98491 40554</a><br>
+              <strong>Landline:</strong> <a href="tel:08662421973" style="color: #fff;">0866-2421973</a> / <a href="tel:08662561973" style="color: #fff;">2561973</a>
+            </p>
+            <p style="color: #10b981;">
+              <i class="fa-solid fa-clock"></i> Mon–Sat: 10:00 AM – 10:00 PM
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          © <span id="currentYear">2026</span> Nava Jyothi Binding Works. All rights reserved.
+        </div>
+        <div style="display: flex; gap: 1.5rem;">
+          <a href="#home" style="color: #94a3b8;">Back to Top <i class="fa-solid fa-arrow-up"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- LIGHTBOX MODAL FOR GALLERY IMAGES -->
+  <div class="modal-backdrop" id="imageLightboxModal">
+    <div class="modal-dialog" style="max-width: 900px; padding: 1.5rem; text-align: center;">
+      <button class="modal-close-btn" onclick="closeLightbox()" aria-label="Close Lightbox">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+      <div style="margin-bottom: 1rem;">
+        <img id="lightboxImg" src="" alt="Enlarged view" style="max-height: 75vh; width: auto; max-width: 100%; margin: 0 auto; border-radius: var(--radius-md); box-shadow: var(--shadow-lg);">
+      </div>
+      <p id="lightboxCaption" style="font-size: 0.95rem; font-weight: 600; color: var(--text-main); line-height: 1.5;"></p>
+    </div>
+  </div>
+
+  <!-- FLOATING QUICK CONTACT DOCK FOR MOBILE -->
+  <div class="floating-dock">
+    <button onclick="toggleCartDrawer()" class="dock-btn btn-primary" style="position: relative;">
+      <i class="fa-solid fa-cart-shopping"></i> Cart (<span id="mobileCartCount">0</span>)
+    </button>
+    <a href="tel:+919849140554" class="dock-btn btn-navy">
+      <i class="fa-solid fa-phone"></i> Call
+    </a>
+    <a href="https://wa.me/919849140554?text=Hi%20Nava%20Jyothi%20Binding%20Works,%20I%20have%20an%20inquiry." target="_blank" rel="noopener noreferrer" class="dock-btn btn-whatsapp">
+      <i class="fa-brands fa-whatsapp"></i> WhatsApp
+    </a>
+    <a href="https://www.google.com/maps/dir//Nava+Jyothi+Binding+Works,+11-40-54,+Pulipativari+St,+1+Town,+Kaleswara+Rao+Market,+Tarapet,+Vijayawada,+Andhra+Pradesh+520001/@16.5141582,80.610601,17z" target="_blank" rel="noopener noreferrer" class="dock-btn btn-outline" style="border-color: var(--border-color);">
+      <i class="fa-solid fa-diamond-turn-right"></i> Map
+    </a>
+  </div>
+
+  <!-- TOAST NOTIFICATION CONTAINER -->
+  <div class="toast-notification" id="toastNotification">
+    <i class="fa-solid fa-circle-check" style="color: #10b981; font-size: 1.25rem;"></i>
+    <span id="toastMessage">Action completed successfully!</span>
+  </div>
+
+  <!-- Master JavaScript Application -->
+  <script src="app.js"></script>
+</body>
+</html>

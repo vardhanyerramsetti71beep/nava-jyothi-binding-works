@@ -1,0 +1,14 @@
+# System files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Python / Local dev
+__pycache__/
+*.py[cod]
+*$py.class
+.vscode/
+.idea/
+
+# Vercel
+.vercel
