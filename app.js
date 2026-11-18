@@ -304,16 +304,6 @@ function updateCartTotals() {
   };
 }
 
-// File Upload Handler for Custom Orders
-function handleFileUpload(event, type) {
-  const file = event.target.files[0];
-  const statusEl = document.getElementById(`${type}PdfStatus`);
-  if (file && statusEl) {
-    statusEl.textContent = `Attached: ${file.name} (${(file.size / (1024 * 1024)).toFixed(2)} MB)`;
-    showToast(`PDF "${file.name}" attached for printing!`);
-  }
-}
-
 // ==========================================================================
 // 6. ONLINE CHECKOUT PROCESS & PAYMENT METHODS
 // ==========================================================================
