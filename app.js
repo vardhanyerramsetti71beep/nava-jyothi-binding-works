@@ -187,13 +187,23 @@ function addCalculatedOrderToCart() {
   const qty = data.quantity || 1;
   const specs = `${data.coverName}, ${data.paperGsm} GSM, ${data.turnaroundTime}`;
 
+  const imgMap = {
+    hardcover: 'assets/images/thesis-hardcover-gold.jpg',
+    spiral: 'assets/images/spiral-binding-wire.jpg',
+    ledger: 'assets/images/marble-account-register.jpg',
+    stitched: 'assets/images/school-notebooks-bundle.jpg',
+    softcover: 'assets/images/thesis-hardcover-gold.jpg',
+    shagun: 'assets/images/shagun-money-covers.jpg'
+  };
+  const itemImage = (data && data.serviceType && imgMap[data.serviceType]) || 'assets/images/thesis-hardcover-gold.jpg';
+
   const existingIdx = cart.findIndex(item => item.title === title && item.specs === specs);
   if (existingIdx > -1) {
     cart[existingIdx].quantity += qty;
   } else {
     cart.push({
       title,
-      image: 'assets/images/storefront-entrance.jpg',
+      image: itemImage,
       category: 'Custom Binding',
       quantity: qty,
       isCustom: true,
@@ -835,4 +845,110 @@ function initInteractiveMap() {
   } catch (err) {
     console.warn('Map initialization:', err);
   }
+}
+
+
+/* ==========================================================================
+   SCROLL TO EXPLORE NAVA JYOTHI INVENTORY LOGIC
+   ========================================================================== */
+function scrollInventory(direction) {
+  const container = document.getElementById('inventoryScrollContainer');
+  if (!container) return;
+  const scrollAmount = 330 * direction;
+  container.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+}
+
+function updateInventoryProgress() {
+  const container = document.getElementById('inventoryScrollContainer');
+  const progressFill = document.getElementById('invScrollProgress');
+  if (!container || !progressFill) return;
+  
+  const maxScroll = container.scrollWidth - container.clientWidth;
+  if (maxScroll <= 0) {
+    progressFill.style.width = '100%';
+    return;
+  }
+  const pct = Math.min(100, Math.max(10, (container.scrollLeft / maxScroll) * 100));
+  progressFill.style.width = `${pct}%`;
+}
+
+function filterInventoryCards(category, btn) {
+  // Update button active states
+  const buttons = document.querySelectorAll('.inv-filter-btn');
+  buttons.forEach(b => b.classList.remove('active'));
+  if (btn) btn.classList.add('active');
+
+  // Filter cards
+  const cards = document.querySelectorAll('.inv-scroll-card');
+  cards.forEach(card => {
+    const cardCat = card.getAttribute('data-inv-cat');
+    if (category === 'all' || cardCat === category || cardCat === 'all') {
+      card.style.display = 'flex';
+    } else {
+      card.style.display = 'none';
+    }
+  });
+
+  // Reset scroll to start
+  const container = document.getElementById('inventoryScrollContainer');
+  if (container) {
+    container.scrollTo({ left: 0, behavior: 'smooth' });
+  }
+}
+
+function scrollToProduct(productId) {
+  const target = document.getElementById(productId);
+  if (!target) return;
+  
+  target.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  target.classList.remove('flash-highlight');
+  // Trigger reflow to restart animation
+  void target.offsetWidth;
+  target.classList.add('flash-highlight');
+
+  showToast('Viewing specifications in store!');
+}
+
+// Mouse drag to scroll implementation
+function initInventoryDragScroll() {
+  const slider = document.getElementById('inventoryScrollContainer');
+  if (!slider) return;
+
+  let isDown = false;
+  let startX;
+  let scrollLeft;
+
+  slider.addEventListener('scroll', updateInventoryProgress);
+
+  slider.addEventListener('mousedown', (e) => {
+    isDown = true;
+    slider.classList.add('grabbing');
+    startX = e.pageX - slider.offsetLeft;
+    scrollLeft = slider.scrollLeft;
+  });
+
+  slider.addEventListener('mouseleave', () => {
+    isDown = false;
+    slider.classList.remove('grabbing');
+  });
+
+  slider.addEventListener('mouseup', () => {
+    isDown = false;
+    slider.classList.remove('grabbing');
+  });
+
+  slider.addEventListener('mousemove', (e) => {
+    if (!isDown) return;
+    e.preventDefault();
+    const x = e.pageX - slider.offsetLeft;
+    const walk = (x - startX) * 1.5;
+    slider.scrollLeft = scrollLeft - walk;
+  });
+}
+
+// Initialize on DOM load
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', initInventoryDragScroll);
+} else {
+  initInventoryDragScroll();
 }

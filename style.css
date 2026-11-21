@@ -2440,3 +2440,363 @@ button, input, select, textarea {
   justify-content: center;
   flex-shrink: 0;
 }
+
+
+/* ==========================================================================
+   SCROLL TO EXPLORE NAVA JYOTHI INVENTORY STYLES
+   ========================================================================== */
+.inventory-scroll-section {
+  padding: 4rem 0 3.5rem 0;
+  background: radial-gradient(circle at 80% 20%, rgba(245, 158, 11, 0.08) 0%, transparent 50%),
+              radial-gradient(circle at 20% 80%, rgba(30, 58, 138, 0.05) 0%, transparent 40%),
+              var(--bg-main);
+  border-bottom: 1px solid var(--border-color);
+  position: relative;
+  overflow: hidden;
+}
+
+.inventory-header-wrap {
+  margin-bottom: 2rem;
+}
+
+.inventory-controls-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.25rem;
+  flex-wrap: wrap;
+  margin-top: 1.75rem;
+  padding: 1rem 1.25rem;
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+}
+
+.inventory-scroll-cue {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--accent-amber);
+  background: rgba(245, 158, 11, 0.1);
+  padding: 0.45rem 1rem;
+  border-radius: var(--radius-full);
+  border: 1px solid rgba(245, 158, 11, 0.25);
+  animation: cueGlow 3s infinite ease-in-out;
+}
+
+@keyframes cueGlow {
+  0%, 100% { box-shadow: 0 0 0 rgba(245, 158, 11, 0); }
+  50% { box-shadow: 0 0 15px rgba(245, 158, 11, 0.35); }
+}
+
+.cue-arrow-anim {
+  display: inline-block;
+  animation: arrowBounce 1.5s infinite ease-in-out;
+}
+
+@keyframes arrowBounce {
+  0%, 100% { transform: translateX(0); }
+  50% { transform: translateX(6px); }
+}
+
+.inv-filter-tags {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.inv-filter-btn {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  color: var(--text-muted);
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 0.35rem 0.85rem;
+  border-radius: var(--radius-full);
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.inv-filter-btn:hover {
+  border-color: var(--accent-amber);
+  color: var(--text-main);
+}
+
+.inv-filter-btn.active {
+  background: var(--accent-amber);
+  color: #0b1528;
+  border-color: var(--accent-amber);
+  font-weight: 700;
+}
+
+.inv-nav-arrows {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.inv-nav-btn {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: var(--bg-surface);
+  border: 1.5px solid var(--border-color);
+  color: var(--text-main);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: all 0.25s ease;
+}
+
+.inv-nav-btn:hover {
+  background: var(--accent-amber);
+  color: #0b1528;
+  border-color: var(--accent-amber);
+  transform: scale(1.08);
+}
+
+.inventory-scroll-container {
+  width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: 1rem 0.25rem 1.75rem 0.25rem;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  cursor: grab;
+  scrollbar-width: thin;
+  scrollbar-color: var(--accent-amber) var(--bg-surface);
+}
+
+.inventory-scroll-container.grabbing {
+  cursor: grabbing;
+  scroll-snap-type: none;
+  scroll-behavior: auto;
+}
+
+.inventory-scroll-container::-webkit-scrollbar {
+  height: 6px;
+}
+
+.inventory-scroll-container::-webkit-scrollbar-track {
+  background: var(--bg-surface);
+  border-radius: 4px;
+}
+
+.inventory-scroll-container::-webkit-scrollbar-thumb {
+  background: var(--accent-amber);
+  border-radius: 4px;
+}
+
+.inventory-scroll-track {
+  display: flex;
+  gap: 1.5rem;
+  width: max-content;
+  user-select: none;
+}
+
+.inv-scroll-card {
+  width: 310px;
+  flex: 0 0 310px;
+  scroll-snap-align: start;
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+}
+
+.inv-scroll-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 18px 30px -10px rgba(11, 21, 40, 0.2);
+  border-color: var(--accent-gold);
+}
+
+.inv-card-img-box {
+  width: 100%;
+  height: 190px;
+  position: relative;
+  overflow: hidden;
+  background: var(--bg-surface);
+}
+
+.inv-card-img-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.inv-scroll-card:hover .inv-card-img-box img {
+  transform: scale(1.08);
+}
+
+.inv-card-badge {
+  position: absolute;
+  top: 0.85rem;
+  left: 0.85rem;
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 0.25rem 0.65rem;
+  border-radius: var(--radius-full);
+  z-index: 2;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+}
+
+.inv-card-badge.gold {
+  background: rgba(11, 21, 40, 0.88);
+  backdrop-filter: blur(6px);
+  color: var(--accent-gold);
+  border: 1px solid rgba(245, 158, 11, 0.4);
+}
+
+.inv-card-badge.blue {
+  background: rgba(11, 21, 40, 0.88);
+  backdrop-filter: blur(6px);
+  color: #38bdf8;
+  border: 1px solid rgba(56, 189, 248, 0.4);
+}
+
+.inv-card-badge.green {
+  background: rgba(11, 21, 40, 0.88);
+  backdrop-filter: blur(6px);
+  color: #4ade80;
+  border: 1px solid rgba(74, 222, 128, 0.4);
+}
+
+.inv-card-badge.amber {
+  background: rgba(11, 21, 40, 0.88);
+  backdrop-filter: blur(6px);
+  color: #fbbf24;
+  border: 1px solid rgba(251, 191, 36, 0.4);
+}
+
+.inv-card-badge.purple {
+  background: rgba(11, 21, 40, 0.88);
+  backdrop-filter: blur(6px);
+  color: #c084fc;
+  border: 1px solid rgba(192, 132, 252, 0.4);
+}
+
+.inv-stock-indicator {
+  position: absolute;
+  bottom: 0.75rem;
+  right: 0.75rem;
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 0.2rem 0.6rem;
+  border-radius: var(--radius-full);
+  background: rgba(11, 21, 40, 0.85);
+  backdrop-filter: blur(6px);
+  color: #10b981;
+  border: 1px solid rgba(16, 185, 129, 0.4);
+  z-index: 2;
+}
+
+.inv-card-body {
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.inv-card-cat {
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--accent-amber);
+  margin-bottom: 0.35rem;
+}
+
+.inv-card-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--text-main);
+  line-height: 1.35;
+  margin-bottom: 0.25rem;
+}
+
+.inv-card-telugu {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  margin-bottom: 0.65rem;
+}
+
+.inv-card-desc {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  line-height: 1.45;
+  margin-bottom: 0.85rem;
+  flex: 1;
+}
+
+.inv-card-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  margin-bottom: 1.15rem;
+}
+
+.inv-card-pills span {
+  font-size: 0.7rem;
+  font-weight: 600;
+  padding: 0.2rem 0.5rem;
+  border-radius: var(--radius-full);
+  background: var(--bg-surface);
+  color: var(--text-muted);
+  border: 1px solid var(--border-color);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.inv-card-pills span i {
+  color: var(--accent-amber);
+}
+
+.inv-card-actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.5rem;
+  margin-top: auto;
+}
+
+.inv-scroll-progress-bar {
+  width: 100%;
+  max-width: 320px;
+  height: 4px;
+  background: var(--border-color);
+  border-radius: 4px;
+  margin: 1.5rem auto 0 auto;
+  overflow: hidden;
+}
+
+.inv-scroll-progress-fill {
+  height: 100%;
+  width: 15%;
+  background: var(--accent-gold);
+  border-radius: 4px;
+  transition: width 0.15s ease-out;
+}
+
+/* Flash highlight animation for target product */
+@keyframes productFlash {
+  0% { box-shadow: 0 0 0 0 rgba(245, 158, 11, 0.8); border-color: var(--accent-gold); transform: scale(1); }
+  50% { box-shadow: 0 0 30px 8px rgba(245, 158, 11, 0.6); border-color: var(--accent-gold); transform: scale(1.03); }
+  100% { box-shadow: var(--shadow-sm); border-color: var(--border-color); transform: scale(1); }
+}
+
+.product-card.flash-highlight {
+  animation: productFlash 2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}

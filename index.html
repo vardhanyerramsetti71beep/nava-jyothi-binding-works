@@ -68,6 +68,7 @@
       <nav aria-label="Main Navigation">
         <ul class="nav-links">
           <li><a href="#home" class="nav-link active">Home</a></li>
+          <li><a href="#inventory" class="nav-link"><i class="fa-solid fa-boxes-stacked"></i> Explore Inventory</a></li>
           <li><a href="#shop" class="nav-link" style="color: var(--accent-amber); font-weight: 800;"><i class="fa-solid fa-cart-shopping"></i> Online Store</a></li>
           <li><a href="#services" class="nav-link">Services</a></li>
           <li><a href="#calculator" class="nav-link">Order Estimator</a></li>
@@ -214,6 +215,347 @@
     </section>
 
 
+    <!-- ==========================================================================
+         SCROLL TO EXPLORE NAVA JYOTHI INVENTORY SHOWCASE
+         ========================================================================== -->
+    <section class="section inventory-scroll-section" id="inventory">
+      <div class="container">
+        <div class="section-header inventory-header-wrap">
+          <div class="section-tag pulse-tag">
+            <i class="fa-solid fa-arrows-left-right"></i>
+            <span>INTERACTIVE INVENTORY SHOWCASE</span>
+          </div>
+          <h2 class="section-title">Scroll to Explore Nava Jyothi Inventory</h2>
+          <div class="section-subtitle-telugu telugu-font">
+            నవ జ్యోతి ఇన్వెంటరీ ని అన్వేషించండి (స్క్రోల్ చేయండి)
+          </div>
+          <p class="section-desc">
+            Swipe horizontally or use arrows to discover our complete inventory on Pulipativari Street — university thesis bindings, school notebooks, traditional ledgers, spiral reports, and wholesale paper goods.
+          </p>
+
+          <!-- Interactive Scroll Controls & Visual Cue -->
+          <div class="inventory-controls-bar">
+            <div class="inventory-scroll-cue">
+              <span class="cue-icon-wrap"><i class="fa-solid fa-hand-pointer"></i></span>
+              <span class="cue-text">Drag or scroll to explore inventory</span>
+              <span class="cue-arrow-anim"><i class="fa-solid fa-arrow-right-long"></i></span>
+            </div>
+
+            <!-- Category Filter Buttons -->
+            <div class="inv-filter-tags">
+              <button class="inv-filter-btn active" data-inv="all" onclick="filterInventoryCards('all', this)">All Items (10)</button>
+              <button class="inv-filter-btn" data-inv="binding" onclick="filterInventoryCards('binding', this)">Book Binding</button>
+              <button class="inv-filter-btn" data-inv="notebooks" onclick="filterInventoryCards('notebooks', this)">Note Books</button>
+              <button class="inv-filter-btn" data-inv="registers" onclick="filterInventoryCards('registers', this)">Account Ledgers</button>
+              <button class="inv-filter-btn" data-inv="wholesale" onclick="filterInventoryCards('wholesale', this)">Paper & Tech</button>
+            </div>
+
+            <!-- Prev / Next Navigation Arrows -->
+            <div class="inv-nav-arrows">
+              <button class="inv-nav-btn prev" id="invScrollPrev" aria-label="Scroll left" onclick="scrollInventory(-1)">
+                <i class="fa-solid fa-chevron-left"></i>
+              </button>
+              <button class="inv-nav-btn next" id="invScrollNext" aria-label="Scroll right" onclick="scrollInventory(1)">
+                <i class="fa-solid fa-chevron-right"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Horizontal Scrollable Container -->
+        <div class="inventory-scroll-container" id="inventoryScrollContainer">
+          <div class="inventory-scroll-track" id="inventoryScrollTrack">
+
+            <!-- Card 1: Hardcover Thesis -->
+            <div class="inv-scroll-card" data-inv-cat="binding">
+              <div class="inv-card-img-box">
+                <img src="assets/images/thesis-hardcover-gold.jpg" alt="Hardcover Thesis & Project Binding with Gold Foil Lettering">
+                <span class="inv-card-badge gold"><i class="fa-solid fa-award"></i> University Spec</span>
+                <span class="inv-stock-indicator in-stock"><i class="fa-solid fa-circle-check"></i> Ready in 2-4h</span>
+              </div>
+              <div class="inv-card-body">
+                <div class="inv-card-cat">Book Binding</div>
+                <h3 class="inv-card-title">Hardcover Thesis & Project Binding</h3>
+                <div class="inv-card-telugu telugu-font">హార్డ్ కవర్ థీసిస్ బైండింగ్ (గోల్డ్ లెటర్స్)</div>
+                <p class="inv-card-desc">Rexine leatherette with gold hot-stamped embossing. Built strictly to university regulations.</p>
+                <div class="inv-card-pills">
+                  <span><i class="fa-solid fa-scroll"></i> Gold Embossed</span>
+                  <span><i class="fa-solid fa-ribbon"></i> Satin Marker</span>
+                  <span><i class="fa-solid fa-shield-halved"></i> AU/JNTUK</span>
+                </div>
+                <div class="inv-card-actions">
+                  <button class="btn btn-outline btn-sm" onclick="scrollToProduct('prod-thesis')">
+                    <i class="fa-solid fa-eye"></i> View in Store
+                  </button>
+                  <a href="https://wa.me/919849140554?text=Hi%20Nava%20Jyothi,%20I%20am%20inquiring%20about%20Hardcover%20Thesis%20Binding." target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp btn-sm">
+                    <i class="fa-brands fa-whatsapp"></i> Inquire
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 2: School Note Books -->
+            <div class="inv-scroll-card" data-inv-cat="notebooks">
+              <div class="inv-card-img-box">
+                <img src="assets/images/school-notebooks-bundle.jpg" alt="School Note Books Bundle Pack">
+                <span class="inv-card-badge blue"><i class="fa-solid fa-industry"></i> Factory Direct</span>
+                <span class="inv-stock-indicator in-stock"><i class="fa-solid fa-boxes-stacked"></i> 1000+ In Stock</span>
+              </div>
+              <div class="inv-card-body">
+                <div class="inv-card-cat">Note Books</div>
+                <h3 class="inv-card-title">School Note Books Bundle (12 Pack)</h3>
+                <div class="inv-card-telugu telugu-font">స్కూల్ నోట్ బుక్స్ బండిల్ (12 పుస్తకాలు)</div>
+                <p class="inv-card-desc">172 Pages, Single Ruled, high-brightness paper, heavy-duty stitching direct from our press.</p>
+                <div class="inv-card-pills">
+                  <span><i class="fa-solid fa-file-lines"></i> 172 Pgs Ruled</span>
+                  <span><i class="fa-solid fa-box"></i> 12 Book Pack</span>
+                  <span><i class="fa-solid fa-pencil"></i> Smooth Writing</span>
+                </div>
+                <div class="inv-card-actions">
+                  <button class="btn btn-outline btn-sm" onclick="scrollToProduct('prod-notebooks')">
+                    <i class="fa-solid fa-eye"></i> View in Store
+                  </button>
+                  <a href="https://wa.me/919849140554?text=Hi%20Nava%20Jyothi,%20I%20am%20inquiring%20about%20School%20Note%20Books%20Bundle." target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp btn-sm">
+                    <i class="fa-brands fa-whatsapp"></i> Inquire
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 3: Marble Account Ledger -->
+            <div class="inv-scroll-card" data-inv-cat="registers">
+              <div class="inv-card-img-box">
+                <img src="assets/images/marble-account-register.jpg" alt="Traditional Marble Binding Registers and Account Ledgers">
+                <span class="inv-card-badge amber"><i class="fa-solid fa-scale-balanced"></i> Market Standard</span>
+                <span class="inv-stock-indicator in-stock"><i class="fa-solid fa-circle-check"></i> All Sizes</span>
+              </div>
+              <div class="inv-card-body">
+                <div class="inv-card-cat">Ledgers & Registers</div>
+                <h3 class="inv-card-title">Commercial Marble Ledger (200 Pgs)</h3>
+                <div class="inv-card-telugu telugu-font">మార్బుల్ బైండింగ్ లెడ్జర్ / డే బుక్</div>
+                <p class="inv-card-desc">Traditional marble-bound hardboard with reinforced cloth spine for merchant accounting.</p>
+                <div class="inv-card-pills">
+                  <span><i class="fa-solid fa-book-journal-whills"></i> Marble Pattern</span>
+                  <span><i class="fa-solid fa-hashtag"></i> Numbered Pages</span>
+                  <span><i class="fa-solid fa-feather"></i> 80 GSM Ledger</span>
+                </div>
+                <div class="inv-card-actions">
+                  <button class="btn btn-outline btn-sm" onclick="scrollToProduct('prod-ledger')">
+                    <i class="fa-solid fa-eye"></i> View in Store
+                  </button>
+                  <a href="https://wa.me/919849140554?text=Hi%20Nava%20Jyothi,%20I%20am%20inquiring%20about%20Marble%20Account%20Ledger." target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp btn-sm">
+                    <i class="fa-brands fa-whatsapp"></i> Inquire
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 4: Spiral & Wire-O -->
+            <div class="inv-scroll-card" data-inv-cat="binding">
+              <div class="inv-card-img-box">
+                <img src="assets/images/spiral-binding-wire.jpg" alt="Spiral and Wire-O Binding Reports">
+                <span class="inv-card-badge green"><i class="fa-solid fa-bolt"></i> 10-Min Fast</span>
+                <span class="inv-stock-indicator in-stock"><i class="fa-solid fa-stopwatch"></i> While-You-Wait</span>
+              </div>
+              <div class="inv-card-body">
+                <div class="inv-card-cat">Book Binding</div>
+                <h3 class="inv-card-title">Spiral & Wire-O Project Binding</h3>
+                <div class="inv-card-telugu telugu-font">స్పైరల్ & వైర్-ఓ ప్రాజెక్ట్ బైండింగ్</div>
+                <p class="inv-card-desc">Flexible 360° lay-flat binding with crystal-clear PVC protective covers and plastic or steel coils.</p>
+                <div class="inv-card-pills">
+                  <span><i class="fa-solid fa-arrows-split-up-and-left"></i> 360° Lay-Flat</span>
+                  <span><i class="fa-solid fa-shield"></i> Clear PVC</span>
+                  <span><i class="fa-solid fa-layer-group"></i> 500 Pgs Max</span>
+                </div>
+                <div class="inv-card-actions">
+                  <button class="btn btn-outline btn-sm" onclick="scrollToProduct('prod-spiral')">
+                    <i class="fa-solid fa-eye"></i> View in Store
+                  </button>
+                  <a href="https://wa.me/919849140554?text=Hi%20Nava%20Jyothi,%20I%20need%20Spiral%20or%20Wire-O%20Binding." target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp btn-sm">
+                    <i class="fa-brands fa-whatsapp"></i> Inquire
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 5: College Long Notebooks -->
+            <div class="inv-scroll-card" data-inv-cat="notebooks">
+              <div class="inv-card-img-box">
+                <img src="assets/images/college-long-notebooks.jpg" alt="College Long Notebooks Pack">
+                <span class="inv-card-badge purple"><i class="fa-solid fa-graduation-cap"></i> Student Choice</span>
+                <span class="inv-stock-indicator in-stock"><i class="fa-solid fa-circle-check"></i> Ready Stock</span>
+              </div>
+              <div class="inv-card-body">
+                <div class="inv-card-cat">Note Books</div>
+                <h3 class="inv-card-title">College Long Notebooks (6 Pack)</h3>
+                <div class="inv-card-telugu telugu-font">లాంగ్ నోట్ బుక్స్ ప్యాక్ (192 పేజీలు)</div>
+                <p class="inv-card-desc">192 Pages, King Size, single ruled, durable glossy outer cover for college & coaching students.</p>
+                <div class="inv-card-pills">
+                  <span><i class="fa-solid fa-graduation-cap"></i> King Size</span>
+                  <span><i class="fa-solid fa-file"></i> 192 Pgs</span>
+                  <span><i class="fa-solid fa-box"></i> 6 Pack</span>
+                </div>
+                <div class="inv-card-actions">
+                  <button class="btn btn-outline btn-sm" onclick="scrollToProduct('prod-longbooks')">
+                    <i class="fa-solid fa-eye"></i> View in Store
+                  </button>
+                  <a href="https://wa.me/919849140554?text=Hi%20Nava%20Jyothi,%20I%20am%20inquiring%20about%20College%20Long%20Notebooks." target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp btn-sm">
+                    <i class="fa-brands fa-whatsapp"></i> Inquire
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 6: Shagun Money Gift Covers -->
+            <div class="inv-scroll-card" data-inv-cat="wholesale">
+              <div class="inv-card-img-box">
+                <img src="assets/images/shagun-money-covers.jpg" alt="Festive Shagun & Money Gift Covers">
+                <span class="inv-card-badge gold"><i class="fa-solid fa-sparkles"></i> Auspicious Craft</span>
+                <span class="inv-stock-indicator in-stock"><i class="fa-solid fa-envelope"></i> 25/50/100 Pks</span>
+              </div>
+              <div class="inv-card-body">
+                <div class="inv-card-cat">Gift Covers</div>
+                <h3 class="inv-card-title">Wedding Money Gift Covers (25 Pcs)</h3>
+                <div class="inv-card-telugu telugu-font">శుభలేఖ మనీ గిఫ్ట్ కవర్లు (25 ప్యాక్)</div>
+                <p class="inv-card-desc">Royal gold metallic hot-foil motifs on imported shimmer & metallic cardstock for weddings.</p>
+                <div class="inv-card-pills">
+                  <span><i class="fa-solid fa-wand-magic-sparkles"></i> Gold Foil</span>
+                  <span><i class="fa-solid fa-stamp"></i> Peel & Seal</span>
+                  <span><i class="fa-solid fa-heart"></i> Festive Shimmer</span>
+                </div>
+                <div class="inv-card-actions">
+                  <button class="btn btn-outline btn-sm" onclick="scrollToProduct('prod-giftcovers')">
+                    <i class="fa-solid fa-eye"></i> View in Store
+                  </button>
+                  <a href="https://wa.me/919849140554?text=Hi%20Nava%20Jyothi,%20I%20am%20inquiring%20about%20Wedding%20Money%20Gift%20Covers." target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp btn-sm">
+                    <i class="fa-brands fa-whatsapp"></i> Inquire
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 7: JK Copier A4 Paper Reams -->
+            <div class="inv-scroll-card" data-inv-cat="wholesale">
+              <div class="inv-card-img-box">
+                <img src="assets/images/paper-reams-copier.jpg" alt="Wholesale Paper Reams JK Copier">
+                <span class="inv-card-badge blue"><i class="fa-solid fa-boxes-packing"></i> Bulk Pallet</span>
+                <span class="inv-stock-indicator in-stock"><i class="fa-solid fa-truck-ramp-box"></i> Direct Supply</span>
+              </div>
+              <div class="inv-card-body">
+                <div class="inv-card-cat">Wholesale Paper</div>
+                <h3 class="inv-card-title">JK Copier A4 Paper Reams (75 GSM)</h3>
+                <div class="inv-card-telugu telugu-font">A4 ఫోటోకాపీ పేపర్ రీమ్ (500 షీట్లు)</div>
+                <p class="inv-card-desc">500 Sheets, crisp white jam-free paper for high-speed laser printing, offices, and institutions.</p>
+                <div class="inv-card-pills">
+                  <span><i class="fa-solid fa-copy"></i> 500 Sheets</span>
+                  <span><i class="fa-solid fa-sun"></i> 98% Bright</span>
+                  <span><i class="fa-solid fa-print"></i> Jam-Free</span>
+                </div>
+                <div class="inv-card-actions">
+                  <button class="btn btn-outline btn-sm" onclick="scrollToProduct('prod-paper')">
+                    <i class="fa-solid fa-eye"></i> View in Store
+                  </button>
+                  <a href="https://wa.me/919849140554?text=Hi%20Nava%20Jyothi,%20I%20am%20inquiring%20about%20JK%20Copier%20Paper%20Reams." target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp btn-sm">
+                    <i class="fa-brands fa-whatsapp"></i> Inquire
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 8: Casio Calculator -->
+            <div class="inv-scroll-card" data-inv-cat="wholesale">
+              <div class="inv-card-img-box">
+                <img src="assets/images/casio-calculator-desk.jpg" alt="Casio DJ-120D Commercial Calculator">
+                <span class="inv-card-badge green"><i class="fa-solid fa-calculator"></i> 100% Genuine</span>
+                <span class="inv-stock-indicator in-stock"><i class="fa-solid fa-shield-check"></i> With Warranty</span>
+              </div>
+              <div class="inv-card-body">
+                <div class="inv-card-cat">Commercial Tech</div>
+                <h3 class="inv-card-title">Casio DJ-120D Commercial Calculator</h3>
+                <div class="inv-card-telugu telugu-font">కాసియో 12 డిజిట్ చెక్ & కరెక్ట్ కాలిక్యులేటర్</div>
+                <p class="inv-card-desc">12 Digits, 300 steps check & correct, extra-large LCD display, dual solar and battery power.</p>
+                <div class="inv-card-pills">
+                  <span><i class="fa-solid fa-calculator"></i> 12 Digits</span>
+                  <span><i class="fa-solid fa-rotate-left"></i> 300 Steps</span>
+                  <span><i class="fa-solid fa-solar-panel"></i> Solar + Batt</span>
+                </div>
+                <div class="inv-card-actions">
+                  <button class="btn btn-outline btn-sm" onclick="scrollToProduct('prod-casio')">
+                    <i class="fa-solid fa-eye"></i> View in Store
+                  </button>
+                  <a href="https://wa.me/919849140554?text=Hi%20Nava%20Jyothi,%20I%20am%20inquiring%20about%20Casio%20DJ-120D%20Calculator." target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp btn-sm">
+                    <i class="fa-brands fa-whatsapp"></i> Inquire
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 9: Industrial Binding Machinery -->
+            <div class="inv-scroll-card" data-inv-cat="binding">
+              <div class="inv-card-img-box">
+                <img src="assets/images/craft-binding-press.jpg" alt="Industrial Bookbinding Presses and Guillotine Cutters">
+                <span class="inv-card-badge amber"><i class="fa-solid fa-gears"></i> Heavy Machinery</span>
+                <span class="inv-stock-indicator in-stock"><i class="fa-solid fa-wrench"></i> On-Site Workshop</span>
+              </div>
+              <div class="inv-card-body">
+                <div class="inv-card-cat">Workshop Services</div>
+                <h3 class="inv-card-title">Industrial Bindery Press & Guillotines</h3>
+                <div class="inv-card-telugu telugu-font">ఇండస్ట్రియల్ బైండింగ్ ప్రెస్ మరియు పేపర్ కట్టర్స్</div>
+                <p class="inv-card-desc">Equipped for high-volume trimming, thread stitching, book rebinding, and brass type hot foil embossing.</p>
+                <div class="inv-card-pills">
+                  <span><i class="fa-solid fa-scissors"></i> Power Guillotine</span>
+                  <span><i class="fa-solid fa-stamp"></i> Hot Foil Press</span>
+                  <span><i class="fa-solid fa-book"></i> Thread Stitched</span>
+                </div>
+                <div class="inv-card-actions">
+                  <a href="#services" class="btn btn-outline btn-sm">
+                    <i class="fa-solid fa-list-check"></i> View Services
+                  </a>
+                  <a href="https://wa.me/919849140554?text=Hi%20Nava%20Jyothi,%20I%20have%20an%20industrial/bulk%20binding%20requirement." target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp btn-sm">
+                    <i class="fa-brands fa-whatsapp"></i> Inquire
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 10: Pulipativari Street Storefront (Authentic Old Photo) -->
+            <div class="inv-scroll-card" data-inv-cat="all">
+              <div class="inv-card-img-box">
+                <img src="assets/images/storefront-entrance.jpg" alt="Nava Jyothi Historic Storefront on Pulipativari Street">
+                <span class="inv-card-badge gold"><i class="fa-solid fa-landmark"></i> Est. 1990</span>
+                <span class="inv-stock-indicator in-stock"><i class="fa-solid fa-door-open"></i> Open Today</span>
+              </div>
+              <div class="inv-card-body">
+                <div class="inv-card-cat">Historic Shop</div>
+                <h3 class="inv-card-title">Authentic Pulipativari Storefront</h3>
+                <div class="inv-card-telugu telugu-font">పులిపాటివారి వీధి స్టోర్ మరియు కౌంటర్</div>
+                <p class="inv-card-desc">Visit us in 1 Town, Vijayawada near KR Market for immediate pickup, consultations, and trade discounts.</p>
+                <div class="inv-card-pills">
+                  <span><i class="fa-solid fa-map-pin"></i> Pulipativari St</span>
+                  <span><i class="fa-solid fa-phone"></i> 98491 40554</span>
+                  <span><i class="fa-solid fa-clock"></i> 10 AM - 10 PM</span>
+                </div>
+                <div class="inv-card-actions">
+                  <a href="#location" class="btn btn-primary btn-sm">
+                    <i class="fa-solid fa-location-dot"></i> Visit Store
+                  </a>
+                  <a href="tel:+919849140554" class="btn btn-navy btn-sm">
+                    <i class="fa-solid fa-phone"></i> Call Shop
+                  </a>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Inventory Scroll Progress Bar -->
+        <div class="inv-scroll-progress-bar">
+          <div class="inv-scroll-progress-fill" id="invScrollProgress"></div>
+        </div>
+      </div>
+    </section>
+
 
     <!-- ==========================================================================
          ONLINE STORE & DIRECT BUYING METHOD SECTION
@@ -240,7 +582,7 @@
           <!-- Product 1: Custom Thesis Binding -->
           <article class="product-card" id="prod-thesis">
             <div class="product-img-box">
-              <img src="assets/images/storefront-entrance.jpg" class="img-focal-counter" alt="Hardcover Thesis Binding at Nava Jyothi Binding Works Storefront">
+              <img src="assets/images/thesis-hardcover-gold.jpg" class="img-focal-counter" alt="Hardcover Thesis Binding at Nava Jyothi Binding Works Storefront">
               <span class="product-badge gold"><i class="fa-solid fa-bolt"></i> Same-Day Rush</span>
             </div>
             <div class="product-info">
@@ -263,10 +605,10 @@
               </div>
 
               <div class="product-actions">
-                <button class="btn btn-outline btn-sm" onclick="addToCart('Hardcover Thesis Binding', 'assets/images/storefront-entrance.jpg', 'Binding Service', true)">
+                <button class="btn btn-outline btn-sm" onclick="addToCart('Hardcover Thesis Binding', 'assets/images/thesis-hardcover-gold.jpg', 'Binding Service', true)">
                   <i class="fa-solid fa-cart-plus"></i> Add to Order
                 </button>
-                <button class="btn btn-primary btn-sm" onclick="buyNow('Hardcover Thesis Binding', 'assets/images/storefront-entrance.jpg', 'Binding Service', true)">
+                <button class="btn btn-primary btn-sm" onclick="buyNow('Hardcover Thesis Binding', 'assets/images/thesis-hardcover-gold.jpg', 'Binding Service', true)">
                   <i class="fa-solid fa-cart-shopping"></i> Order Online
                 </button>
               </div>
@@ -276,7 +618,7 @@
           <!-- Product 2: School Note Books 12 Pack -->
           <article class="product-card" id="prod-notebooks">
             <div class="product-img-box">
-              <img src="assets/images/interior-aisle-stock.jpg" class="img-focal-shelves-top" alt="School Note Books Stacks in Shop Aisles">
+              <img src="assets/images/school-notebooks-bundle.jpg" class="img-focal-shelves-top" alt="School Note Books Stacks in Shop Aisles">
               <span class="product-badge"><i class="fa-solid fa-industry"></i> In-House Mfr</span>
             </div>
             <div class="product-info">
@@ -299,10 +641,10 @@
               </div>
 
               <div class="product-actions">
-                <button class="btn btn-outline btn-sm" onclick="addToCart('School Note Books (12 Pack)', 'assets/images/interior-aisle-stock.jpg', 'Note Books')">
+                <button class="btn btn-outline btn-sm" onclick="addToCart('School Note Books (12 Pack)', 'assets/images/school-notebooks-bundle.jpg', 'Note Books')">
                   <i class="fa-solid fa-cart-plus"></i> Add to Order
                 </button>
-                <button class="btn btn-primary btn-sm" onclick="buyNow('School Note Books (12 Pack)', 'assets/images/interior-aisle-stock.jpg', 'Note Books')">
+                <button class="btn btn-primary btn-sm" onclick="buyNow('School Note Books (12 Pack)', 'assets/images/school-notebooks-bundle.jpg', 'Note Books')">
                   <i class="fa-solid fa-cart-shopping"></i> Order Online
                 </button>
               </div>
@@ -312,7 +654,7 @@
           <!-- Product 3: Marble Bound Account Ledger -->
           <article class="product-card" id="prod-ledger">
             <div class="product-img-box">
-              <img src="assets/images/storefront-entrance.jpg" class="img-focal-counter" alt="Authentic Handcrafted Marble Bound Registers">
+              <img src="assets/images/marble-account-register.jpg" class="img-focal-counter" alt="Authentic Handcrafted Marble Bound Registers">
               <span class="product-badge"><i class="fa-solid fa-landmark"></i> Commercial</span>
             </div>
             <div class="product-info">
@@ -335,10 +677,10 @@
               </div>
 
               <div class="product-actions">
-                <button class="btn btn-outline btn-sm" onclick="addToCart('Commercial Marble Ledger (200 Pgs)', 'assets/images/storefront-entrance.jpg', 'Ledgers')">
+                <button class="btn btn-outline btn-sm" onclick="addToCart('Commercial Marble Ledger (200 Pgs)', 'assets/images/marble-account-register.jpg', 'Ledgers')">
                   <i class="fa-solid fa-cart-plus"></i> Add to Order
                 </button>
-                <button class="btn btn-primary btn-sm" onclick="buyNow('Commercial Marble Ledger (200 Pgs)', 'assets/images/storefront-entrance.jpg', 'Ledgers')">
+                <button class="btn btn-primary btn-sm" onclick="buyNow('Commercial Marble Ledger (200 Pgs)', 'assets/images/marble-account-register.jpg', 'Ledgers')">
                   <i class="fa-solid fa-cart-shopping"></i> Order Online
                 </button>
               </div>
@@ -348,7 +690,7 @@
           <!-- Product 4: Shagun Money Gift Covers -->
           <article class="product-card" id="prod-giftcovers">
             <div class="product-img-box">
-              <img src="assets/images/interior-aisle-stock.jpg" class="img-focal-counter" alt="Festive Shagun and Money Gift Covers in Store Aisles">
+              <img src="assets/images/shagun-money-covers.jpg" class="img-focal-counter" alt="Festive Shagun and Money Gift Covers in Store Aisles">
               <span class="product-badge gold"><i class="fa-solid fa-sparkles"></i> Festive</span>
             </div>
             <div class="product-info">
@@ -371,10 +713,10 @@
               </div>
 
               <div class="product-actions">
-                <button class="btn btn-outline btn-sm" onclick="addToCart('Wedding Money Gift Covers (25 Pcs)', 'assets/images/interior-aisle-stock.jpg', 'Gift Covers')">
+                <button class="btn btn-outline btn-sm" onclick="addToCart('Wedding Money Gift Covers (25 Pcs)', 'assets/images/shagun-money-covers.jpg', 'Gift Covers')">
                   <i class="fa-solid fa-cart-plus"></i> Add to Order
                 </button>
-                <button class="btn btn-primary btn-sm" onclick="buyNow('Wedding Money Gift Covers (25 Pcs)', 'assets/images/interior-aisle-stock.jpg', 'Gift Covers')">
+                <button class="btn btn-primary btn-sm" onclick="buyNow('Wedding Money Gift Covers (25 Pcs)', 'assets/images/shagun-money-covers.jpg', 'Gift Covers')">
                   <i class="fa-solid fa-cart-shopping"></i> Order Online
                 </button>
               </div>
@@ -384,7 +726,7 @@
           <!-- Product 5: JK Copier Paper Ream -->
           <article class="product-card" id="prod-paper">
             <div class="product-img-box">
-              <img src="assets/images/interior-aisle-stock.jpg" class="img-focal-shelves-bottom" alt="Wholesale Paper Reams in Nava Jyothi Aisles">
+              <img src="assets/images/paper-reams-copier.jpg" class="img-focal-shelves-bottom" alt="Wholesale Paper Reams in Nava Jyothi Aisles">
               <span class="product-badge"><i class="fa-solid fa-box"></i> Wholesale Ream</span>
             </div>
             <div class="product-info">
@@ -407,10 +749,10 @@
               </div>
 
               <div class="product-actions">
-                <button class="btn btn-outline btn-sm" onclick="addToCart('JK Copier A4 Ream (75 GSM)', 'assets/images/interior-aisle-stock.jpg', 'Paper')">
+                <button class="btn btn-outline btn-sm" onclick="addToCart('JK Copier A4 Ream (75 GSM)', 'assets/images/paper-reams-copier.jpg', 'Paper')">
                   <i class="fa-solid fa-cart-plus"></i> Add to Order
                 </button>
-                <button class="btn btn-primary btn-sm" onclick="buyNow('JK Copier A4 Ream (75 GSM)', 'assets/images/interior-aisle-stock.jpg', 'Paper')">
+                <button class="btn btn-primary btn-sm" onclick="buyNow('JK Copier A4 Ream (75 GSM)', 'assets/images/paper-reams-copier.jpg', 'Paper')">
                   <i class="fa-solid fa-cart-shopping"></i> Order Online
                 </button>
               </div>
@@ -420,7 +762,7 @@
           <!-- Product 6: Spiral & Wire-O Binding -->
           <article class="product-card" id="prod-spiral">
             <div class="product-img-box">
-              <img src="assets/images/storefront-entrance.jpg" class="img-focal-signboard" alt="Fast Spiral and Wire-O Binding at Store">
+              <img src="assets/images/spiral-binding-wire.jpg" class="img-focal-signboard" alt="Fast Spiral and Wire-O Binding at Store">
               <span class="product-badge"><i class="fa-solid fa-bolt"></i> Fast 10-Min</span>
             </div>
             <div class="product-info">
@@ -443,10 +785,10 @@
               </div>
 
               <div class="product-actions">
-                <button class="btn btn-outline btn-sm" onclick="addToCart('Spiral Project Binding', 'assets/images/storefront-entrance.jpg', 'Binding Service', true)">
+                <button class="btn btn-outline btn-sm" onclick="addToCart('Spiral Project Binding', 'assets/images/spiral-binding-wire.jpg', 'Binding Service', true)">
                   <i class="fa-solid fa-cart-plus"></i> Add to Order
                 </button>
-                <button class="btn btn-primary btn-sm" onclick="buyNow('Spiral Project Binding', 'assets/images/storefront-entrance.jpg', 'Binding Service', true)">
+                <button class="btn btn-primary btn-sm" onclick="buyNow('Spiral Project Binding', 'assets/images/spiral-binding-wire.jpg', 'Binding Service', true)">
                   <i class="fa-solid fa-cart-shopping"></i> Order Online
                 </button>
               </div>
@@ -456,7 +798,7 @@
           <!-- Product 7: Long Notebooks 6 Pack -->
           <article class="product-card" id="prod-longbooks">
             <div class="product-img-box">
-              <img src="assets/images/interior-aisle-stock.jpg" class="img-focal-shelves-top" alt="College Long Notebooks Pack on High Shelves">
+              <img src="assets/images/college-long-notebooks.jpg" class="img-focal-shelves-top" alt="College Long Notebooks Pack on High Shelves">
               <span class="product-badge"><i class="fa-solid fa-book"></i> King Size</span>
             </div>
             <div class="product-info">
@@ -479,10 +821,10 @@
               </div>
 
               <div class="product-actions">
-                <button class="btn btn-outline btn-sm" onclick="addToCart('College Long Notebooks (6 Pack)', 'assets/images/interior-aisle-stock.jpg', 'Note Books')">
+                <button class="btn btn-outline btn-sm" onclick="addToCart('College Long Notebooks (6 Pack)', 'assets/images/college-long-notebooks.jpg', 'Note Books')">
                   <i class="fa-solid fa-cart-plus"></i> Add to Order
                 </button>
-                <button class="btn btn-primary btn-sm" onclick="buyNow('College Long Notebooks (6 Pack)', 'assets/images/interior-aisle-stock.jpg', 'Note Books')">
+                <button class="btn btn-primary btn-sm" onclick="buyNow('College Long Notebooks (6 Pack)', 'assets/images/college-long-notebooks.jpg', 'Note Books')">
                   <i class="fa-solid fa-cart-shopping"></i> Order Online
                 </button>
               </div>
@@ -492,7 +834,7 @@
           <!-- Product 8: Casio Commercial Calculator -->
           <article class="product-card" id="prod-casio">
             <div class="product-img-box">
-              <img src="assets/images/interior-aisle-stock.jpg" class="img-focal-counter" alt="Genuine Casio Commercial Calculators Available at Shop Counter">
+              <img src="assets/images/casio-calculator-desk.jpg" class="img-focal-counter" alt="Genuine Casio Commercial Calculators Available at Shop Counter">
               <span class="product-badge"><i class="fa-solid fa-calculator"></i> Original</span>
             </div>
             <div class="product-info">
@@ -515,10 +857,10 @@
               </div>
 
               <div class="product-actions">
-                <button class="btn btn-outline btn-sm" onclick="addToCart('Casio DJ-120D Calculator', 'assets/images/interior-aisle-stock.jpg', 'Stationery')">
+                <button class="btn btn-outline btn-sm" onclick="addToCart('Casio DJ-120D Calculator', 'assets/images/casio-calculator-desk.jpg', 'Stationery')">
                   <i class="fa-solid fa-cart-plus"></i> Add to Order
                 </button>
-                <button class="btn btn-primary btn-sm" onclick="buyNow('Casio DJ-120D Calculator', 'assets/images/interior-aisle-stock.jpg', 'Stationery')">
+                <button class="btn btn-primary btn-sm" onclick="buyNow('Casio DJ-120D Calculator', 'assets/images/casio-calculator-desk.jpg', 'Stationery')">
                   <i class="fa-solid fa-cart-shopping"></i> Order Online
                 </button>
               </div>
@@ -733,7 +1075,7 @@
           <!-- Card 1 -->
           <article class="service-card" data-category="binding">
             <div class="service-banner-box">
-              <img src="assets/images/storefront-entrance.jpg" class="img-focal-counter" alt="Hardcover Thesis Binding at Nava Jyothi Storefront">
+              <img src="assets/images/thesis-hardcover-gold.jpg" class="img-focal-counter" alt="Hardcover Thesis Binding at Nava Jyothi Storefront">
               <span class="service-banner-badge"><i class="fa-solid fa-award"></i> University Standard</span>
             </div>
             <div class="service-card-body">
@@ -761,7 +1103,7 @@
                 Specifications
                 <strong>Gold Embossed Rexine</strong>
               </div>
-              <button class="btn btn-primary btn-sm" onclick="buyNow('Hardcover Thesis Binding', 'assets/images/storefront-entrance.jpg', 'Binding Service', true)">
+              <button class="btn btn-primary btn-sm" onclick="buyNow('Hardcover Thesis Binding', 'assets/images/thesis-hardcover-gold.jpg', 'Binding Service', true)">
                 Order / Inquire <i class="fa-solid fa-arrow-right"></i>
               </button>
             </div>
@@ -770,7 +1112,7 @@
           <!-- Card 2 -->
           <article class="service-card" data-category="binding">
             <div class="service-banner-box">
-              <img src="assets/images/storefront-entrance.jpg" class="img-focal-signboard" alt="Spiral and Wire-O Document Binding">
+              <img src="assets/images/spiral-binding-wire.jpg" class="img-focal-signboard" alt="Spiral and Wire-O Document Binding">
               <span class="service-banner-badge"><i class="fa-solid fa-bolt"></i> 10-Min While-You-Wait</span>
             </div>
             <div class="service-card-body">
@@ -798,7 +1140,7 @@
                 Turnaround
                 <strong>While You Wait</strong>
               </div>
-              <button class="btn btn-primary btn-sm" onclick="buyNow('Spiral Project Binding', 'assets/images/storefront-entrance.jpg', 'Binding Service', true)">
+              <button class="btn btn-primary btn-sm" onclick="buyNow('Spiral Project Binding', 'assets/images/spiral-binding-wire.jpg', 'Binding Service', true)">
                 Order / Inquire <i class="fa-solid fa-arrow-right"></i>
               </button>
             </div>
@@ -807,7 +1149,7 @@
           <!-- Card 3 -->
           <article class="service-card" data-category="registers">
             <div class="service-banner-box">
-              <img src="assets/images/storefront-entrance.jpg" class="img-focal-counter" alt="Traditional Marble Binding Registers and Account Ledgers">
+              <img src="assets/images/marble-account-register.jpg" class="img-focal-counter" alt="Traditional Marble Binding Registers and Account Ledgers">
               <span class="service-banner-badge"><i class="fa-solid fa-landmark"></i> Commercial Standard</span>
             </div>
             <div class="service-card-body">
@@ -835,7 +1177,7 @@
                 Durability
                 <strong>Heavy Thread Stitch</strong>
               </div>
-              <button class="btn btn-primary btn-sm" onclick="buyNow('Commercial Marble Ledger (200 Pgs)', 'assets/images/storefront-entrance.jpg', 'Ledgers')">
+              <button class="btn btn-primary btn-sm" onclick="buyNow('Commercial Marble Ledger (200 Pgs)', 'assets/images/marble-account-register.jpg', 'Ledgers')">
                 Order / Inquire <i class="fa-solid fa-arrow-right"></i>
               </button>
             </div>
@@ -844,7 +1186,7 @@
           <!-- Card 4 -->
           <article class="service-card" data-category="notebooks">
             <div class="service-banner-box">
-              <img src="assets/images/interior-aisle-stock.jpg" class="img-focal-shelves-top" alt="Custom Exercise Notebooks Manufacturing by Nava Jyothi">
+              <img src="assets/images/school-notebooks-bundle.jpg" class="img-focal-shelves-top" alt="Custom Exercise Notebooks Manufacturing by Nava Jyothi">
               <span class="service-banner-badge"><i class="fa-solid fa-school"></i> Schools & Colleges</span>
             </div>
             <div class="service-card-body">
@@ -872,7 +1214,7 @@
                 Capacity
                 <strong>Wholesale Direct Supply</strong>
               </div>
-              <button class="btn btn-primary btn-sm" onclick="buyNow('School Note Books (12 Pack)', 'assets/images/interior-aisle-stock.jpg', 'Note Books')">
+              <button class="btn btn-primary btn-sm" onclick="buyNow('School Note Books (12 Pack)', 'assets/images/school-notebooks-bundle.jpg', 'Note Books')">
                 Order / Inquire <i class="fa-solid fa-arrow-right"></i>
               </button>
             </div>
@@ -881,7 +1223,7 @@
           <!-- Card 5 -->
           <article class="service-card" data-category="gift">
             <div class="service-banner-box">
-              <img src="assets/images/interior-aisle-stock.jpg" class="img-focal-counter" alt="Traditional Shagun and Money Gift Covers in Store Aisles">
+              <img src="assets/images/shagun-money-covers.jpg" class="img-focal-counter" alt="Traditional Shagun and Money Gift Covers in Store Aisles">
               <span class="service-banner-badge"><i class="fa-solid fa-heart"></i> Auspicious Craft</span>
             </div>
             <div class="service-card-body">
@@ -909,7 +1251,7 @@
                 Packaging
                 <strong>Packs of 25 / 50 / 100</strong>
               </div>
-              <button class="btn btn-primary btn-sm" onclick="buyNow('Wedding Money Gift Covers (25 Pcs)', 'assets/images/interior-aisle-stock.jpg', 'Gift Covers')">
+              <button class="btn btn-primary btn-sm" onclick="buyNow('Wedding Money Gift Covers (25 Pcs)', 'assets/images/shagun-money-covers.jpg', 'Gift Covers')">
                 Order / Inquire <i class="fa-solid fa-arrow-right"></i>
               </button>
             </div>
@@ -918,7 +1260,7 @@
           <!-- Card 6 -->
           <article class="service-card" data-category="wholesale">
             <div class="service-banner-box">
-              <img src="assets/images/interior-aisle-stock.jpg" class="img-focal-shelves-bottom" alt="Wholesale Paper Reams and Commercial Stationery Racks">
+              <img src="assets/images/paper-reams-copier.jpg" class="img-focal-shelves-bottom" alt="Wholesale Paper Reams and Commercial Stationery Racks">
               <span class="service-banner-badge"><i class="fa-solid fa-boxes-stacked"></i> Wholesale Hub</span>
             </div>
             <div class="service-card-body">
@@ -946,7 +1288,7 @@
                 Dealer Supply
                 <strong>Carton & Pallet Lots</strong>
               </div>
-              <button class="btn btn-primary btn-sm" onclick="buyNow('JK Copier A4 Ream (75 GSM)', 'assets/images/interior-aisle-stock.jpg', 'Paper')">
+              <button class="btn btn-primary btn-sm" onclick="buyNow('JK Copier A4 Ream (75 GSM)', 'assets/images/paper-reams-copier.jpg', 'Paper')">
                 Order / Inquire <i class="fa-solid fa-arrow-right"></i>
               </button>
             </div>
@@ -994,7 +1336,27 @@
             </div>
           </div>
 
-          <!-- Card 3: Interactive Store Tour Guide -->
+          <!-- Photo 3: Workshop Machinery -->
+          <div class="gallery-item gallery-col-6" onclick="openLightbox('assets/images/craft-binding-press.jpg', 'Bindery Workshop - Heavy-duty paper cutting guillotines, thread stitching benches, and brass type hot-foil stamping presses at our workshop.')">
+            <img src="assets/images/craft-binding-press.jpg" alt="Industrial Bookbinding Press and Cutting Guillotine at Nava Jyothi Binding Works">
+            <span class="gallery-badge"><i class="fa-solid fa-gears"></i> Bindery Workshop & Machinery</span>
+            <div class="gallery-overlay">
+              <h4>Industrial Bindery Equipment</h4>
+              <p>Heavy-duty cutting guillotines, thread stitching, and hot-foil stamping machines operated by master craftsmen.</p>
+            </div>
+          </div>
+
+          <!-- Photo 4: Golden Thesis Craft -->
+          <div class="gallery-item gallery-col-6" onclick="openLightbox('assets/images/thesis-hardcover-gold.jpg', 'University Thesis Craft - Premium rexine leatherette covers with gold foil hot-stamped academic embossing, satin ribbon markers, and corner reinforcement.')">
+            <img src="assets/images/thesis-hardcover-gold.jpg" alt="University Standard Hardcover Thesis with Gold Embossed Lettering">
+            <span class="gallery-badge gold"><i class="fa-solid fa-award"></i> University Gold Standard</span>
+            <div class="gallery-overlay">
+              <h4>University Standard Hardcover Thesis</h4>
+              <p>Precision brass hot-stamped gold lettering on durable rexine leatherette for PhD dissertations and project submissions.</p>
+            </div>
+          </div>
+
+          <!-- Card 5: Interactive Store Tour Guide -->
           <div class="gallery-item gallery-col-6" style="background: var(--bg-card); padding: 2.25rem; border: 1.5px solid var(--border-color); display: flex; flex-direction: column; justify-content: space-between;">
             <div>
               <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.75rem;">
