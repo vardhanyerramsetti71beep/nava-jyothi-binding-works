@@ -516,18 +516,36 @@ function printReceipt() {
 // ==========================================================================
 // 7. INTERACTIVE BINDING SPECIFICATION ESTIMATOR
 // ==========================================================================
-function setExactPageCount(val) {
+const PAGE_STEPS = [10, 50, 100, 150, 200, 250, 300, 450, 600];
+
+function onPageSliderStep(stepVal) {
+  const idx = Math.max(0, Math.min(PAGE_STEPS.length - 1, parseInt(stepVal, 10)));
+  const pages = PAGE_STEPS[idx];
+  setExactPageCount(pages, false);
+}
+
+function setExactPageCount(val, updateSlider = true) {
   let num = parseInt(val, 10);
   if (isNaN(num) || num < 5) num = 5;
-  if (num > 1000) num = 1000;
+  if (num > 2000) num = 2000;
 
   const slider = document.getElementById('calcPageCount');
   const numInput = document.getElementById('exactPageNumberInput');
   const display = document.getElementById('pageCountDisplay');
 
-  if (slider && parseInt(slider.value, 10) !== Math.min(600, Math.max(10, num))) {
-    slider.value = Math.min(600, Math.max(10, num));
+  if (updateSlider && slider) {
+    let closestIdx = 0;
+    let minDiff = Infinity;
+    PAGE_STEPS.forEach((stepVal, i) => {
+      const diff = Math.abs(stepVal - num);
+      if (diff < minDiff) {
+        minDiff = diff;
+        closestIdx = i;
+      }
+    });
+    slider.value = closestIdx;
   }
+
   if (numInput && parseInt(numInput.value, 10) !== num) {
     numInput.value = num;
   }
@@ -556,7 +574,13 @@ function calculateEstimate() {
   const serviceType = document.getElementById('calcServiceType').value;
   const numInput = document.getElementById('exactPageNumberInput');
   const slider = document.getElementById('calcPageCount');
-  const pageCount = (numInput && parseInt(numInput.value, 10)) || (slider && parseInt(slider.value, 10)) || 150;
+  let pageCount = 150;
+  if (numInput && !isNaN(parseInt(numInput.value, 10))) {
+    pageCount = parseInt(numInput.value, 10);
+  } else if (slider) {
+    const idx = parseInt(slider.value, 10);
+    pageCount = PAGE_STEPS[idx] || 150;
+  }
   const quantity = Math.max(1, parseInt(document.getElementById('calcQuantity').value, 10) || 1);
   const turnaround = document.getElementById('calcTurnaround').value;
   const coverFinish = document.getElementById('calcCoverFinish').value;

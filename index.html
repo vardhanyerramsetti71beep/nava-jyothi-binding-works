@@ -932,12 +932,14 @@
               </div>
 
               <div class="range-slider-wrapper">
-                <input type="range" min="10" max="600" step="5" value="150" class="calc-range" id="calcPageCount" oninput="setExactPageCount(this.value)">
+                <input type="range" min="0" max="8" step="1" value="3" class="calc-range" id="calcPageCount" oninput="onPageSliderStep(this.value)">
                 <div class="range-values" style="display: flex; justify-content: space-between; font-size: 0.75rem; color: var(--text-muted); margin-top: 0.35rem;">
                   <span role="button" tabindex="0" onclick="setExactPageCount(10)" style="cursor: pointer;">10 Pgs</span>
-                  <span role="button" tabindex="0" onclick="setExactPageCount(100)" style="cursor: pointer; color: var(--accent-gold); font-weight: 700;">100</span>
-                  <span role="button" tabindex="0" onclick="setExactPageCount(150)" style="cursor: pointer; color: var(--accent-gold); font-weight: 700;">150</span>
+                  <span role="button" tabindex="0" onclick="setExactPageCount(50)" style="cursor: pointer;">50</span>
+                  <span role="button" tabindex="0" onclick="setExactPageCount(100)" style="cursor: pointer; color: var(--accent-gold); font-weight: 800;">★ 100</span>
+                  <span role="button" tabindex="0" onclick="setExactPageCount(150)" style="cursor: pointer; color: var(--accent-gold); font-weight: 800;">★ 150</span>
                   <span role="button" tabindex="0" onclick="setExactPageCount(200)" style="cursor: pointer;">200</span>
+                  <span role="button" tabindex="0" onclick="setExactPageCount(250)" style="cursor: pointer;">250</span>
                   <span role="button" tabindex="0" onclick="setExactPageCount(300)" style="cursor: pointer;">300</span>
                   <span role="button" tabindex="0" onclick="setExactPageCount(450)" style="cursor: pointer;">450</span>
                   <span role="button" tabindex="0" onclick="setExactPageCount(600)" style="cursor: pointer;">600+ Pgs</span>
