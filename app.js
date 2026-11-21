@@ -190,7 +190,7 @@ function addCalculatedOrderToCart() {
   const imgMap = {
     hardcover: 'assets/images/thesis-hardcover-gold.jpg',
     spiral: 'assets/images/spiral-binding-wire.jpg',
-    ledger: 'assets/images/marble-account-register.jpg',
+    ledger: 'assets/images/nj-marble-binding-books.jpg',
     stitched: 'assets/images/school-notebooks-bundle.jpg',
     softcover: 'assets/images/thesis-hardcover-gold.jpg',
     shagun: 'assets/images/shagun-money-covers.jpg'
@@ -599,7 +599,7 @@ function calculateEstimate() {
       serviceName = "Spiral / Wire-O Binding";
       break;
     case 'ledger':
-      serviceName = "Account Marble Ledger (మార్బుల్ బైండింగ్)";
+      serviceName = "Marble Binding Book / Register (మార్బుల్ బైండింగ్)";
       break;
     case 'stitched':
       serviceName = "Stitched Note Books (కుట్టు పుస్తకాలు)";
