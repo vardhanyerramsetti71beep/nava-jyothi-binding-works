@@ -549,27 +549,9 @@
           </div>
         </div>
 
-        <!-- Prominent Interactive Inventory Scrollbar Control -->
-        <div class="inventory-scrollbar-wrapper">
-          <button class="inv-scroll-arrow-btn" onclick="scrollInventory(-1)" aria-label="Scroll left" title="Scroll left">
-            <i class="fa-solid fa-chevron-left"></i>
-          </button>
-          
-          <div class="inventory-custom-scrollbar" id="inventoryCustomScrollbar" title="Drag or click along the scrollbar to browse inventory">
-            <div class="inv-custom-scroll-track">
-              <div class="inv-custom-scroll-thumb" id="invCustomScrollThumb">
-                <span class="thumb-grip-lines"></span>
-              </div>
-            </div>
-          </div>
-
-          <button class="inv-scroll-arrow-btn" onclick="scrollInventory(1)" aria-label="Scroll right" title="Scroll right">
-            <i class="fa-solid fa-chevron-right"></i>
-          </button>
-        </div>
-        
-        <div class="inv-scroll-hint-label">
-          <i class="fa-solid fa-arrows-left-right"></i> Drag the golden scrollbar or swipe cards to explore full inventory
+        <!-- Inventory Scroll Progress Bar -->
+        <div class="inv-scroll-progress-bar">
+          <div class="inv-scroll-progress-fill" id="invScrollProgress"></div>
         </div>
       </div>
     </section>
@@ -1858,24 +1840,55 @@
               <p style="font-size: 0.88rem; color: var(--text-muted); line-height: 1.5;">
                 Key product sections available directly inside our Pulipativari Street retail and wholesale counter:
               </p>
-              <ul class="hotspot-list">
-                <li class="hotspot-item">
-                  <span class="hotspot-num">1</span>
-                  <div><strong>School & College Note Books:</strong> 172/192/300 Pgs, Single & Broad Ruled, Rough Books.</div>
-                </li>
-                <li class="hotspot-item">
-                  <span class="hotspot-num">2</span>
-                  <div><strong>Commercial Account Ledgers:</strong> Marble bound day books, cash registers & attendance books.</div>
-                </li>
-                <li class="hotspot-item">
-                  <span class="hotspot-num">3</span>
-                  <div><strong>Commercial Calculators & Tech:</strong> Genuine Casio 12-digit check & correct billing calculators.</div>
-                </li>
-                <li class="hotspot-item">
-                  <span class="hotspot-num">4</span>
-                  <div><strong>Wedding & Shagun Money Covers:</strong> Gold embossed gift envelopes for all functions.</div>
-                </li>
-              </ul>
+              
+              <!-- Scrollable Inventory Guide List with Golden Scrollbar -->
+              <div class="inventory-guide-scrollbox">
+                <ul class="hotspot-list">
+                  <li class="hotspot-item">
+                    <span class="hotspot-num">1</span>
+                    <div><strong>School & College Note Books:</strong> 172/192/300 Pgs, Single & Broad Ruled, King Size Long Books, Rough Books.</div>
+                  </li>
+                  <li class="hotspot-item">
+                    <span class="hotspot-num">2</span>
+                    <div><strong>Commercial Marble Binding Books:</strong> Handcrafted marble paper bound day books, cash registers & attendance books.</div>
+                  </li>
+                  <li class="hotspot-item">
+                    <span class="hotspot-num">3</span>
+                    <div><strong>Genuine Casio Calculators:</strong> fx-991CW ClassWiz, fx-991ES Plus, fx-991MS, DJ-120D & MJ-120GST billing models.</div>
+                  </li>
+                  <li class="hotspot-item">
+                    <span class="hotspot-num">4</span>
+                    <div><strong>Hardcover Thesis & Project Binding:</strong> Golden embossed rexine binding for university dissertations & reports.</div>
+                  </li>
+                  <li class="hotspot-item">
+                    <span class="hotspot-num">5</span>
+                    <div><strong>Green Calico Cloth Court Registers:</strong> Heavy cloth legal registers, hospital ledgers & official records.</div>
+                  </li>
+                  <li class="hotspot-item">
+                    <span class="hotspot-num">6</span>
+                    <div><strong>Wedding & Shagun Money Covers:</strong> Gold embossed gift envelopes for all festive & auspicious functions.</div>
+                  </li>
+                  <li class="hotspot-item">
+                    <span class="hotspot-num">7</span>
+                    <div><strong>Wholesale Paper Reams & JK Copier:</strong> 75/80 GSM crisp white photo copier paper for high-speed laser printing.</div>
+                  </li>
+                  <li class="hotspot-item">
+                    <span class="hotspot-num">8</span>
+                    <div><strong>Spiral, Wire-O & Softcover Binding:</strong> Fast turnaround project reports, manuals & training handbook binding.</div>
+                  </li>
+                  <li class="hotspot-item">
+                    <span class="hotspot-num">9</span>
+                    <div><strong>Commercial Bill Books & Vouchers:</strong> Custom numbered counter books, challan pads, duplicate/triplicate sets.</div>
+                  </li>
+                  <li class="hotspot-item">
+                    <span class="hotspot-num">10</span>
+                    <div><strong>Student Rough & Drawing Pads:</strong> Heavy-duty drawing sheets, lab records & graph paper books.</div>
+                  </li>
+                </ul>
+              </div>
+              <div class="inventory-scroll-hint-note">
+                <i class="fa-solid fa-arrows-up-down"></i> Scroll down to explore all 10+ inventory sections
+              </div>
             </div>
             <div style="display: flex; gap: 0.75rem; margin-top: 1rem;">
               <a href="#shop" class="btn btn-primary btn-sm" style="flex: 1;">

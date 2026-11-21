@@ -914,89 +914,16 @@ function scrollInventory(direction) {
 
 function updateInventoryProgress() {
   const container = document.getElementById('inventoryScrollContainer');
-  const customThumb = document.getElementById('invCustomScrollThumb');
-  const customScrollbar = document.getElementById('inventoryCustomScrollbar');
-  if (!container) return;
+  const progressFill = document.getElementById('invScrollProgress');
+  if (!container || !progressFill) return;
   
   const maxScroll = container.scrollWidth - container.clientWidth;
   if (maxScroll <= 0) {
-    if (customThumb) {
-      customThumb.style.width = '100%';
-      customThumb.style.left = '0%';
-    }
+    progressFill.style.width = '100%';
     return;
   }
-  
-  const scrollFraction = Math.min(1, Math.max(0, container.scrollLeft / maxScroll));
-  
-  if (customThumb && customScrollbar) {
-    const visibleRatio = container.clientWidth / container.scrollWidth;
-    const thumbWidthPct = Math.min(40, Math.max(15, visibleRatio * 100));
-    customThumb.style.width = `${thumbWidthPct}%`;
-    const maxThumbLeft = 100 - thumbWidthPct;
-    customThumb.style.left = `${scrollFraction * maxThumbLeft}%`;
-  }
-}
-
-function initCustomScrollbarDrag() {
-  const container = document.getElementById('inventoryScrollContainer');
-  const customScrollbar = document.getElementById('inventoryCustomScrollbar');
-  const customThumb = document.getElementById('invCustomScrollThumb');
-  if (!container || !customScrollbar || !customThumb) return;
-
-  let isDraggingThumb = false;
-  let startX = 0;
-  let startScrollLeft = 0;
-
-  // Click on track to jump
-  customScrollbar.addEventListener('click', (e) => {
-    if (e.target === customThumb || customThumb.contains(e.target)) return;
-    const rect = customScrollbar.getBoundingClientRect();
-    const clickX = e.clientX - rect.left;
-    const clickFraction = Math.min(1, Math.max(0, clickX / rect.width));
-    const maxScroll = container.scrollWidth - container.clientWidth;
-    container.scrollTo({ left: clickFraction * maxScroll, behavior: 'smooth' });
-  });
-
-  // Drag thumb
-  function onThumbDown(e) {
-    isDraggingThumb = true;
-    startX = e.type.includes('touch') ? e.touches[0].clientX : e.clientX;
-    startScrollLeft = container.scrollLeft;
-    container.style.scrollBehavior = 'auto'; // Instant during drag
-    document.body.style.userSelect = 'none';
-  }
-
-  function onThumbMove(e) {
-    if (!isDraggingThumb) return;
-    const clientX = e.type.includes('touch') ? e.touches[0].clientX : e.clientX;
-    const deltaX = clientX - startX;
-    const trackWidth = customScrollbar.clientWidth;
-    const maxScroll = container.scrollWidth - container.clientWidth;
-    const visibleRatio = container.clientWidth / container.scrollWidth;
-    const thumbWidthPct = Math.min(40, Math.max(15, visibleRatio * 100));
-    const availableTrackWidth = trackWidth * (1 - thumbWidthPct / 100);
-
-    if (availableTrackWidth > 0) {
-      const scrollDelta = (deltaX / availableTrackWidth) * maxScroll;
-      container.scrollLeft = Math.min(maxScroll, Math.max(0, startScrollLeft + scrollDelta));
-    }
-  }
-
-  function onThumbUp() {
-    if (!isDraggingThumb) return;
-    isDraggingThumb = false;
-    container.style.scrollBehavior = 'smooth';
-    document.body.style.userSelect = '';
-  }
-
-  customThumb.addEventListener('mousedown', onThumbDown);
-  window.addEventListener('mousemove', onThumbMove);
-  window.addEventListener('mouseup', onThumbUp);
-
-  customThumb.addEventListener('touchstart', onThumbDown, { passive: true });
-  window.addEventListener('touchmove', onThumbMove, { passive: true });
-  window.addEventListener('touchend', onThumbUp);
+  const pct = Math.min(100, Math.max(10, (container.scrollLeft / maxScroll) * 100));
+  progressFill.style.width = `${pct}%`;
 }
 
 function filterInventoryCards(category, btn) {
@@ -1047,9 +974,6 @@ function initInventoryDragScroll() {
   let scrollLeft;
 
   slider.addEventListener('scroll', updateInventoryProgress);
-  window.addEventListener('resize', updateInventoryProgress);
-  initCustomScrollbarDrag();
-  updateInventoryProgress();
 
   slider.addEventListener('mousedown', (e) => {
     isDown = true;
