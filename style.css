@@ -2569,15 +2569,15 @@ button, input, select, textarea {
 
 .inventory-scroll-container {
   width: 100%;
-  overflow-x: auto;
+  overflow-x: scroll; /* Forces horizontal scrollbar to always be present and visible */
   overflow-y: hidden;
-  padding: 1rem 0.25rem 1.75rem 0.25rem;
+  padding: 1rem 0.25rem 1.25rem 0.25rem;
   scroll-behavior: smooth;
   scroll-snap-type: x mandatory;
   -webkit-overflow-scrolling: touch;
   cursor: grab;
-  scrollbar-width: thin;
-  scrollbar-color: var(--accent-amber) var(--bg-surface);
+  scrollbar-width: auto; /* Full width for easy grabbing */
+  scrollbar-color: #f59e0b #0f172a; /* Gold/Amber thumb on dark navy track */
 }
 
 .inventory-scroll-container.grabbing {
@@ -2587,17 +2587,27 @@ button, input, select, textarea {
 }
 
 .inventory-scroll-container::-webkit-scrollbar {
-  height: 6px;
+  height: 12px; /* Substantial 12px height for high visibility */
 }
 
 .inventory-scroll-container::-webkit-scrollbar-track {
-  background: var(--bg-surface);
-  border-radius: 4px;
+  background: #0f172a;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  margin: 0 0.5rem;
 }
 
 .inventory-scroll-container::-webkit-scrollbar-thumb {
-  background: var(--accent-amber);
-  border-radius: 4px;
+  background: linear-gradient(90deg, #f59e0b 0%, #d97706 100%);
+  border-radius: 10px;
+  border: 2px solid #0f172a;
+  box-shadow: 0 0 10px rgba(245, 158, 11, 0.4);
+  cursor: grab;
+}
+
+.inventory-scroll-container::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(90deg, #fbbf24 0%, #f59e0b 100%);
+  box-shadow: 0 0 16px rgba(245, 158, 11, 0.7);
 }
 
 .inventory-scroll-track {
@@ -2779,22 +2789,130 @@ button, input, select, textarea {
   margin-top: auto;
 }
 
-.inv-scroll-progress-bar {
-  width: 100%;
-  max-width: 320px;
-  height: 4px;
-  background: var(--border-color);
-  border-radius: 4px;
-  margin: 1.5rem auto 0 auto;
-  overflow: hidden;
+/* Prominent Custom Scrollbar Control for Nava Jyothi Inventory */
+.inventory-scrollbar-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  margin: 1.5rem auto 0.4rem auto;
+  max-width: 680px;
+  width: 95%;
+  padding: 0.5rem 0.75rem;
+  background: rgba(15, 23, 42, 0.85);
+  border: 1px solid rgba(245, 158, 11, 0.35);
+  border-radius: 50px;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
 }
 
-.inv-scroll-progress-fill {
+.inv-scroll-arrow-btn {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  border: 1px solid rgba(245, 158, 11, 0.4);
+  background: rgba(30, 41, 59, 0.9);
+  color: var(--accent-amber);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  flex-shrink: 0;
+  font-size: 0.95rem;
+}
+
+.inv-scroll-arrow-btn:hover {
+  background: var(--accent-amber);
+  color: #0f172a;
+  transform: scale(1.1);
+  box-shadow: 0 0 14px rgba(245, 158, 11, 0.6);
+}
+
+.inv-scroll-arrow-btn:active {
+  transform: scale(0.95);
+}
+
+.inventory-custom-scrollbar {
+  flex: 1;
+  height: 18px;
+  background: rgba(10, 15, 29, 0.95);
+  border-radius: 14px;
+  position: relative;
+  cursor: pointer;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.7);
+  padding: 2px;
+}
+
+.inv-custom-scroll-track {
+  position: relative;
+  width: 100%;
   height: 100%;
-  width: 15%;
-  background: var(--accent-gold);
-  border-radius: 4px;
-  transition: width 0.15s ease-out;
+  border-radius: 12px;
+}
+
+.inv-custom-scroll-thumb {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 25%;
+  min-width: 50px;
+  background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 50%, #d97706 100%);
+  border-radius: 12px;
+  cursor: grab;
+  box-shadow: 0 2px 10px rgba(245, 158, 11, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: box-shadow 0.2s, background 0.2s;
+}
+
+.inv-custom-scroll-thumb:hover,
+.inv-custom-scroll-thumb:active {
+  cursor: grabbing;
+  background: linear-gradient(135deg, #fde68a 0%, #fbbf24 50%, #f59e0b 100%);
+  box-shadow: 0 0 18px rgba(245, 158, 11, 0.85);
+}
+
+.thumb-grip-lines {
+  display: block;
+  width: 10px;
+  height: 8px;
+  border-left: 2px solid rgba(15, 23, 42, 0.5);
+  border-right: 2px solid rgba(15, 23, 42, 0.5);
+  position: relative;
+}
+
+.thumb-grip-lines::after {
+  content: '';
+  position: absolute;
+  left: 2px;
+  top: 0;
+  width: 2px;
+  height: 8px;
+  background: rgba(15, 23, 42, 0.5);
+}
+
+.inv-scroll-hint-label {
+  text-align: center;
+  font-size: 0.82rem;
+  color: #94a3b8;
+  margin-top: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.45rem;
+  letter-spacing: 0.02em;
+}
+
+.inv-scroll-hint-label i {
+  color: var(--accent-amber);
+}
+
+.inv-scroll-progress-bar {
+  display: none;
 }
 
 /* Flash highlight animation for target product */
