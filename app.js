@@ -193,7 +193,7 @@ function addCalculatedOrderToCart() {
   } else {
     cart.push({
       title,
-      image: 'assets/images/storefront-entrance.jpg',
+      image: 'assets/images/thesis-hardcover-gold.jpg',
       category: 'Custom Binding',
       quantity: qty,
       isCustom: true,
