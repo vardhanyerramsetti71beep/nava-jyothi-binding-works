@@ -907,20 +907,40 @@
               </select>
             </div>
 
-            <!-- Page Count Slider -->
+            <!-- Page Count Selector with Exact Input, Quick-Select Pills (including 100 & 150), and Synchronized Slider -->
             <div class="calc-group" id="pageCountGroup">
-              <div class="calc-label">
-                <span>2. Number of Pages</span>
-                <span style="font-size: 1.1rem; color: var(--accent-gold); font-weight: 800;" id="pageCountDisplay">120 Pages</span>
+              <div class="calc-label" style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 0.5rem;">
+                <span style="font-weight: 700;">2. Number of Pages</span>
+                <div class="exact-page-badge" style="display: inline-flex; align-items: center; gap: 0.4rem; background: var(--bg-surface); padding: 0.25rem 0.65rem; border-radius: var(--radius-md); border: 1.5px solid var(--accent-gold); box-shadow: var(--shadow-sm);">
+                  <label for="exactPageNumberInput" style="font-size: 0.78rem; color: var(--text-muted); font-weight: 700; text-transform: uppercase;">Exact Count:</label>
+                  <input type="number" id="exactPageNumberInput" min="5" max="1000" step="1" value="150" class="exact-page-input" style="width: 70px; padding: 0.15rem 0.35rem; font-weight: 800; font-size: 1.15rem; color: var(--accent-gold); background: transparent; border: 1px solid var(--border-color); border-radius: var(--radius-sm); text-align: center;" oninput="setExactPageCount(this.value)" onchange="setExactPageCount(this.value)">
+                  <span style="font-weight: 800; color: var(--accent-gold); font-size: 0.95rem;" id="pageCountDisplay">150 Pages</span>
+                </div>
               </div>
+
+              <!-- Quick Exact Page Selector Pills including 100 & 150 -->
+              <div class="page-preset-pills" style="display: flex; flex-wrap: wrap; gap: 0.4rem; margin-bottom: 0.85rem;">
+                <button type="button" class="page-preset-btn" data-pages="50" onclick="setExactPageCount(50)">50 Pgs</button>
+                <button type="button" class="page-preset-btn" data-pages="80" onclick="setExactPageCount(80)">80 Pgs</button>
+                <button type="button" class="page-preset-btn" data-pages="100" onclick="setExactPageCount(100)">★ 100 Pgs</button>
+                <button type="button" class="page-preset-btn active" data-pages="150" onclick="setExactPageCount(150)">★ 150 Pgs</button>
+                <button type="button" class="page-preset-btn" data-pages="200" onclick="setExactPageCount(200)">200 Pgs</button>
+                <button type="button" class="page-preset-btn" data-pages="250" onclick="setExactPageCount(250)">250 Pgs</button>
+                <button type="button" class="page-preset-btn" data-pages="300" onclick="setExactPageCount(300)">300 Pgs</button>
+                <button type="button" class="page-preset-btn" data-pages="400" onclick="setExactPageCount(400)">400 Pgs</button>
+                <button type="button" class="page-preset-btn" data-pages="500" onclick="setExactPageCount(500)">500+ Pgs</button>
+              </div>
+
               <div class="range-slider-wrapper">
-                <input type="range" min="10" max="600" step="5" value="120" class="calc-range" id="calcPageCount" oninput="updatePageCount(this.value)">
-                <div class="range-values">
-                  <span>10 Pages</span>
-                  <span>150</span>
-                  <span>300</span>
-                  <span>450</span>
-                  <span>600+ Pages</span>
+                <input type="range" min="10" max="600" step="5" value="150" class="calc-range" id="calcPageCount" oninput="setExactPageCount(this.value)">
+                <div class="range-values" style="display: flex; justify-content: space-between; font-size: 0.75rem; color: var(--text-muted); margin-top: 0.35rem;">
+                  <span role="button" tabindex="0" onclick="setExactPageCount(10)" style="cursor: pointer;">10 Pgs</span>
+                  <span role="button" tabindex="0" onclick="setExactPageCount(100)" style="cursor: pointer; color: var(--accent-gold); font-weight: 700;">100</span>
+                  <span role="button" tabindex="0" onclick="setExactPageCount(150)" style="cursor: pointer; color: var(--accent-gold); font-weight: 700;">150</span>
+                  <span role="button" tabindex="0" onclick="setExactPageCount(200)" style="cursor: pointer;">200</span>
+                  <span role="button" tabindex="0" onclick="setExactPageCount(300)" style="cursor: pointer;">300</span>
+                  <span role="button" tabindex="0" onclick="setExactPageCount(450)" style="cursor: pointer;">450</span>
+                  <span role="button" tabindex="0" onclick="setExactPageCount(600)" style="cursor: pointer;">600+ Pgs</span>
                 </div>
               </div>
             </div>

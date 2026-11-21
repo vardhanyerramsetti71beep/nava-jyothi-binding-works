@@ -516,17 +516,47 @@ function printReceipt() {
 // ==========================================================================
 // 7. INTERACTIVE BINDING SPECIFICATION ESTIMATOR
 // ==========================================================================
-function updatePageCount(val) {
+function setExactPageCount(val) {
+  let num = parseInt(val, 10);
+  if (isNaN(num) || num < 5) num = 5;
+  if (num > 1000) num = 1000;
+
+  const slider = document.getElementById('calcPageCount');
+  const numInput = document.getElementById('exactPageNumberInput');
   const display = document.getElementById('pageCountDisplay');
-  if (display) {
-    display.textContent = `${val} Pages`;
+
+  if (slider && parseInt(slider.value, 10) !== Math.min(600, Math.max(10, num))) {
+    slider.value = Math.min(600, Math.max(10, num));
   }
+  if (numInput && parseInt(numInput.value, 10) !== num) {
+    numInput.value = num;
+  }
+  if (display) {
+    display.textContent = `${num} Pages`;
+  }
+
+  // Update preset buttons active state
+  document.querySelectorAll('.page-preset-btn').forEach(btn => {
+    const pVal = parseInt(btn.getAttribute('data-pages'), 10);
+    if (pVal === num) {
+      btn.classList.add('active');
+    } else {
+      btn.classList.remove('active');
+    }
+  });
+
   calculateEstimate();
+}
+
+function updatePageCount(val) {
+  setExactPageCount(val);
 }
 
 function calculateEstimate() {
   const serviceType = document.getElementById('calcServiceType').value;
-  const pageCount = parseInt(document.getElementById('calcPageCount').value, 10) || 50;
+  const numInput = document.getElementById('exactPageNumberInput');
+  const slider = document.getElementById('calcPageCount');
+  const pageCount = (numInput && parseInt(numInput.value, 10)) || (slider && parseInt(slider.value, 10)) || 150;
   const quantity = Math.max(1, parseInt(document.getElementById('calcQuantity').value, 10) || 1);
   const turnaround = document.getElementById('calcTurnaround').value;
   const coverFinish = document.getElementById('calcCoverFinish').value;

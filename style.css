@@ -2800,3 +2800,68 @@ button, input, select, textarea {
 .product-card.flash-highlight {
   animation: productFlash 2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
+
+/* ==========================================================================
+   EXACT PAGE COUNT SELECTOR STYLES
+   ========================================================================== */
+.page-preset-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+}
+
+.page-preset-btn {
+  background: var(--bg-surface);
+  border: 1.5px solid var(--border-color);
+  color: var(--text-main);
+  font-size: 0.78rem;
+  font-weight: 700;
+  padding: 0.35rem 0.75rem;
+  border-radius: var(--radius-full);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  user-select: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.page-preset-btn:hover {
+  border-color: var(--accent-gold);
+  color: var(--accent-gold);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.page-preset-btn.active {
+  background: var(--accent-gold);
+  color: #0b1528;
+  border-color: var(--accent-gold);
+  font-weight: 800;
+  box-shadow: 0 3px 12px rgba(245, 158, 11, 0.4);
+}
+
+.exact-page-badge {
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.exact-page-badge:focus-within {
+  border-color: var(--accent-gold);
+  box-shadow: 0 0 0 3px rgba(245, 158, 11, 0.2);
+}
+
+.exact-page-input:focus {
+  outline: none;
+  background: rgba(245, 158, 11, 0.08);
+}
+
+.range-values span {
+  transition: color 0.2s ease, transform 0.2s ease;
+  user-select: none;
+  padding: 2px 4px;
+}
+
+.range-values span:hover {
+  color: var(--accent-gold) !important;
+  transform: scale(1.15);
+}
