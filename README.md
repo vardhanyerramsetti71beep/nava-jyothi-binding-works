@@ -24,13 +24,11 @@ Based on the Google Maps business listing:
 
 ---
 
-## 📸 Authentic Images Integrated Directly From The Link
+## 📸 Authentic Images Integrated Directly From Google Maps
 
-All real visual media from the Google Maps listing have been extracted and embedded:
-1. `assets/images/storefront-entrance.jpg`: The original storefront entrance on Pulipativari Street, displaying the authentic bilingual signage, phone numbers, tax details, and stacked notebooks.
+All real visual media from the Google Maps listing have been embedded with specialized focal framing:
+1. `assets/images/storefront-entrance.jpg`: The original storefront entrance on Pulipativari Street, displaying the authentic bilingual signage, phone numbers (9849140554, 2421973, 2423544, 2561973), tax details, and stacked notebooks.
 2. `assets/images/interior-aisle-stock.jpg`: Interior photograph of ceiling-high wooden shelves filled with notebooks, Camlin/Apsara art materials, Casio calculators, and the garlanded founder portrait.
-3. `assets/images/craft-binding-press.jpg`: Bookbinding workshop with heavy-duty cutting guillotines, thread stitching, and hot foil presses.
-4. Curated high-resolution dedicated product photography for thesis binding, spiral binding, marble registers, notebooks, gift covers, and paper goods.
 
 ---
 

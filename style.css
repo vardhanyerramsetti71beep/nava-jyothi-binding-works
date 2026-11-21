@@ -2260,3 +2260,183 @@ button, input, select, textarea {
   margin-bottom: 1rem;
   border-bottom: 1px dashed var(--border-color);
 }
+
+
+/* ==========================================================================
+   LIVELY REDESIGN & AUTHENTIC FOCAL CROPS
+   ========================================================================== */
+.img-focal-signboard {
+  object-position: center 10% !important;
+}
+
+.img-focal-counter {
+  object-position: center 85% !important;
+}
+
+.img-focal-shelves-top {
+  object-position: 50% 25% !important;
+}
+
+.img-focal-shelves-bottom {
+  object-position: 50% 75% !important;
+}
+
+/* Floating WhatsApp Quick Action Button */
+.floating-wa-btn {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  z-index: 990;
+  background: #25d366;
+  color: #ffffff !important;
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.85rem;
+  box-shadow: 0 8px 25px rgba(37, 211, 102, 0.45);
+  text-decoration: none;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease;
+}
+
+.floating-wa-btn:hover {
+  transform: scale(1.12) translateY(-4px);
+  box-shadow: 0 14px 32px rgba(37, 211, 102, 0.6);
+  color: #ffffff;
+}
+
+.floating-wa-pulse {
+  position: absolute;
+  inset: -6px;
+  border-radius: 50%;
+  border: 2.5px solid #25d366;
+  animation: waPulseAnim 2.2s infinite cubic-bezier(0, 0.2, 0.8, 1);
+  pointer-events: none;
+}
+
+@keyframes waPulseAnim {
+  0% { transform: scale(0.9); opacity: 1; }
+  100% { transform: scale(1.45); opacity: 0; }
+}
+
+/* Live Store Status Ribbon */
+.live-status-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(16, 185, 129, 0.12);
+  color: #10b981;
+  border: 1px solid rgba(16, 185, 129, 0.35);
+  padding: 0.4rem 1rem;
+  border-radius: var(--radius-full);
+  font-size: 0.85rem;
+  font-weight: 700;
+  margin-bottom: 1.25rem;
+}
+
+.live-pulse-ring {
+  width: 10px;
+  height: 10px;
+  background: #10b981;
+  border-radius: 50%;
+  position: relative;
+}
+
+.live-pulse-ring::after {
+  content: '';
+  position: absolute;
+  inset: -4px;
+  border-radius: 50%;
+  border: 2px solid #10b981;
+  animation: pulseRing 1.8s infinite ease-out;
+}
+
+@keyframes pulseRing {
+  0% { transform: scale(0.8); opacity: 1; }
+  100% { transform: scale(2.2); opacity: 0; }
+}
+
+/* Interactive Book Spine Estimator Preview */
+.calc-book-visual-box {
+  background: rgba(11, 21, 40, 0.7);
+  border: 1px dashed rgba(245, 158, 11, 0.4);
+  border-radius: var(--radius-md);
+  padding: 1.25rem;
+  margin-bottom: 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.25rem;
+}
+
+.book-visual-canvas {
+  height: 70px;
+  background: linear-gradient(135deg, #0b1528 0%, #1e3a8a 100%);
+  border: 2px solid var(--accent-gold);
+  border-radius: 4px 8px 8px 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: -4px 6px 16px rgba(0,0,0,0.4);
+  transition: width 0.35s ease;
+  min-width: 60px;
+  max-width: 140px;
+  color: var(--accent-gold);
+  font-size: 0.8rem;
+  font-weight: 800;
+  text-align: center;
+  padding: 0 0.5rem;
+}
+
+/* Gallery Hotspot Annotation Tour */
+.hotspot-tour-card {
+  background: var(--bg-card);
+  border-radius: var(--radius-lg);
+  border: 1.5px solid var(--border-color);
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.hotspot-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  margin: 1.25rem 0;
+}
+
+.hotspot-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 0.92rem;
+  color: var(--text-main);
+  background: var(--bg-surface);
+  padding: 0.65rem 1rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border-color);
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.hotspot-item:hover {
+  transform: translateX(4px);
+  border-color: var(--accent-gold);
+}
+
+.hotspot-num {
+  width: 24px;
+  height: 24px;
+  background: var(--accent-gold);
+  color: #0b1528;
+  border-radius: 50%;
+  font-size: 0.75rem;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
